@@ -1,0 +1,256 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_0176da</item>
+        <item name="android:listDivider">@drawable/divider</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <item name="android:spinnerStyle">@style/holoSpinner</item>
+    </style>
+
+    <style name="OverflowMenu" parent="@android:style/Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">#99CCFF</item>
+    </style>
+
+    <style name="AppTheme.StatusBar" parent="Theme.AppCompat.Light.NoActionBar"></style>
+
+    <style name="Theme.ToolBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="actionOverflowButtonStyle">@style/ToolButton.Overflow</item>
+    </style>
+
+    <style name="ToolButton.Overflow" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@mipmap/ic_menu_more_overflow</item>
+    </style>
+
+    <style name="RaidoButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+        <item name="android:textColor">@color/radio_button_text_selecter</item>
+    </style>
+
+    <style name="RaidoButton.Background" parent="RaidoButton">
+        <item name="android:background">@drawable/radio_button_tab_bg_selecter</item>
+    </style>
+
+    <declare-styleable name="VoiceView">
+        <attr name="voiceMax" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="SignView">
+        <attr name="lineColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+    </declare-styleable>
+
+    <style name="DialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>移除边框
+        <item name="android:windowNoTitle">true</item>去除顶部标题栏
+        <item name="android:windowIsTranslucent">true</item>窗体透明
+        <item name="android:background">@android:color/white</item>窗体背景
+        <item name="android:windowBackground">@android:color/transparent</item>窗体背景透明
+        <item name="android:windowIsFloating">false</item>窗体是否浮动
+        <item name="android:backgroundDimEnabled">true</item>背景是否昏暗
+        <item name="android:backgroundDimAmount">0.6</item>昏暗数量
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="style_text_left">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minEms">7</item>
+        <item name="android:paddingLeft">@dimen/margin_15</item>
+        <item name="android:paddingTop">@dimen/padding_10</item>
+        <item name="android:paddingBottom">@dimen/padding_5</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <style name="style_text_right">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/margin_10</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textColor">@color/color_black_2</item>
+        <item name="android:paddingTop">@dimen/padding_10</item>
+        <item name="android:paddingBottom">@dimen/padding_5</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:textSize">@dimen/textsize_14</item>
+    </style>
+
+    <declare-styleable name="TabLayout">
+        <attr name="tabIndicatorColor" format="color" />
+        <attr name="tabIndicatorHeight" format="dimension" />
+        <attr name="tabIndicatorWidth" format="dimension" />
+        <attr name="tabContentStart" format="dimension" />
+        <attr name="tabBackground" format="reference" />
+        <attr name="tabMode">
+            <enum name="scrollable" value="0" />
+            <enum name="fixed" value="1" />
+        </attr>
+        <attr name="tabGravity">
+            <enum name="fill" value="0" />
+            <enum name="center" value="1" />
+        </attr>
+        <attr name="tabMinWidth" format="dimension" />
+        <attr name="tabMaxWidth" format="dimension" />
+        <attr name="tabTextAppearance" format="reference" />
+        <attr name="tabTextColor" format="color" />
+        <attr name="tabSelectedTextColor" format="color" />
+        <attr name="tabPaddingStart" format="dimension" />
+        <attr name="tabPaddingTop" format="dimension" />
+        <attr name="tabPaddingEnd" format="dimension" />
+        <attr name="tabPaddingBottom" format="dimension" />
+        <attr name="tabPadding" format="dimension" />
+        <attr name="bottomLineColor" format="color" />
+        <attr name="dividerColor" format="color" />
+        <attr name="bottomLineHeight" format="dimension" />
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="dividerHeight" format="dimension" />
+        <!--<attr name="bottomLineMode">-->
+        <!--<enum name="none" value="0"/>-->
+        <!--<enum name="outer" value="1"/>-->
+        <!--<enum name="inner" value="2"/>-->
+        <!--</attr>-->
+    </declare-styleable>
+
+    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">?attr/selectableItemBackground</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">?android:textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.Design.Tab" parent="TextAppearance.AppCompat.Button">
+        <item name="android:textSize">@dimen/design_tab_text_size</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <declare-styleable name="TabItem">
+        <attr name="android:text" />
+        <attr name="android:icon" />
+        <attr name="android:layout" />
+    </declare-styleable>
+    <dimen name="design_tab_text_size">14sp</dimen>
+    <dimen name="design_tab_text_size_2line">12sp</dimen>
+    <dimen name="design_tab_max_width">264dp</dimen>
+    <dimen name="design_tab_scrollable_min_width">72dp</dimen>
+
+    <style name="item_number_add_sub_style">
+        <item name="android:clickable">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="PopupMenuStyle" parent="AppTheme">
+        <item name="android:radioButtonStyle">@style/MenuRadioButtonStyle</item>
+    </style>
+
+    <style name="MenuRadioButtonStyle" parent="@android:style/Widget.CompoundButton.RadioButton">
+        <item name="android:button">@drawable/selector_menu_rb</item>
+    </style>
+
+    <style name="AnimTools" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/push_in</item>
+        <item name="android:windowExitAnimation">@anim/push_out</item>
+    </style>
+
+    <style name="holoSpinner" parent="Widget.AppCompat.Spinner.Underlined">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="font_mid_black_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_gray_33</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="spinner_mid_black_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_gray_33</item>
+        <item name="android:textColorHint">@color/color_gray_99</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+    </style>
+
+    <style name="edt_mid_black_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_gray_33</item>
+        <item name="android:textColorHint">@color/color_gray_99</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@null</item>
+    </style>
+
+    <style name="edt_select_mid_black_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/color_gray_33</item>
+        <item name="android:textColorHint">@color/color_gray_99</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:background">@null</item>
+        <item name="android:editable">false</item>
+        <item name="android:focusable">false</item>
+        <item name="android:focusableInTouchMode">false</item>
+        <item name="android:drawableRight">@drawable/ic_arrow_drop_down_black_24dp</item>
+    </style>
+
+    <style name="btnStyle_submit">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dip</item>
+        <item name="android:background">@drawable/btn_overrate_bg_shape_blue</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <!--登录EditText-->
+    <style name="login_edit">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_setting</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="button_login_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:background">@drawable/shap_theme_radius</item>
+    </style>
+
+</resources>

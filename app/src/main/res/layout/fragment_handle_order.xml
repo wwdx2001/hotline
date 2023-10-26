@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?><!--工单处理-处理-->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--处理类别-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_type"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/sp_handle_type"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--处理内容-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_content"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/sp_handle_content"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--发生原因-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:id="@+id/text_handle_type"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_happened_reason"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/sp_happened_reason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--解决措施-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:id="@+id/text_handle_measure"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_measure"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/sp_handle_measure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--处理结果-->
+        <LinearLayout
+            android:id="@+id/ll_handle_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:id="@+id/text_handle_result"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_result"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/sp_handle_result"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--复核抄码-->
+        <LinearLayout
+            android:id="@+id/ll_fuchao_chaoma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_fuhe_chaoma"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fuhe_chaoma"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/et_fuhe_chaoma"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:digits="0123456789"
+                android:inputType="number"
+                android:maxLength="10"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--抄表状态-->
+        <LinearLayout
+            android:id="@+id/ll_chaobiao_zt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_chaobiao_zt"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_chaobiao_zt"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/et_chaobiao_zt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                android:editable="false"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+
+        <!--处理备注-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_mark"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/et_shoulibeizhu"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--处理时间选择-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_handle_time"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_start_date_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:text="@string/text_choose_handle_time"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+
+        <!--到场时间选择-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_arrive_time"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_arrive_date_show"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_weight="1"
+                android:text="@string/text_choose_arrive_time"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="20dp"
+                android:text="*"
+                android:textColor="@color/color_red_ff0000"
+                android:textSize="@dimen/text_size_xxxlarge" />
+        </LinearLayout>
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/margin_10"-->
+        <!--android:text="*"-->
+        <!--android:textColor="@color/color_red_ff0000"-->
+        <!--android:textSize="@dimen/text_size_xxxlarge" />-->
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_gray_f2"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white_ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:padding="@dimen/margin_10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.sh3h.hotline.view.AddAndSubEditText
+                android:id="@+id/collection_searchview1"
+                style="@style/edt_mid_black_style"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_10"
+                tools:ignore="NestedWeights" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_ea_divider" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/collection_search1"
+            style="@style/font_mid_black_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:padding="@dimen/margin_10"
+            android:text="搜索"
+            android:textColor="@color/color_blue_0176da" />
+
+        <TextView
+            android:id="@+id/collection_reset"
+            style="@style/font_mid_black_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/margin_5"
+            android:padding="@dimen/margin_10"
+            android:text="重置"
+            android:textColor="@color/color_blue_0176da" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_white_ffffff"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <com.sh3h.hotline.view.AddAndSubEditText
+            android:id="@+id/collection_searchview"
+            style="@style/edt_mid_black_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:maxLines="1"
+            android:hint="请输入账户编号、用水地址或客户名称"
+            android:ellipsize="end"
+            android:textSize="@dimen/textsize_12"
+            android:drawablePadding="@dimen/margin_20"
+            android:background="@drawable/edit_text_bg_gray"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawableRight="@drawable/ic_baseline_clear_24"
+            tools:ignore="NestedWeights" />
+
+        <TextView
+            android:id="@+id/collection_search"
+            style="@style/btnStyle_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:paddingLeft="@dimen/margin_15"
+            android:paddingRight="@dimen/margin_15"
+            android:text="搜索" />
+
+    </LinearLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/collection_task__order_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context="com.sh3h.hotline.ui.collection.CollectionTaskActivity">
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/synchronize_data_swiperefresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/collection_task_order_list_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical" />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/collection_task_list_fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@mipmap/ic_arrow_up_48px"
+            android:visibility="gone" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</LinearLayout>

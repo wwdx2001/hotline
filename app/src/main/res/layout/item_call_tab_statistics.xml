@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_gray_99"
+            app:layout_constraintBottom_toBottomOf="@+id/pch"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/pch"
+            app:layout_constraintTop_toTopOf="@+id/pch" />
+
+        <TextView
+            android:id="@+id/pch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/view_line"
+            app:layout_constraintRight_toLeftOf="@+id/view_line2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line2"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_bule_1e1eb6"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintLeft_toRightOf="@+id/pch"
+            app:layout_constraintRight_toLeftOf="@+id/count"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/view_line2"
+            app:layout_constraintRight_toLeftOf="@+id/view_line3"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view_line3"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_bule_1e1eb6"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintLeft_toRightOf="@+id/count"
+            app:layout_constraintRight_toLeftOf="@+id/finished"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+        <TextView
+            android:id="@+id/finished"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/view_line3"
+            app:layout_constraintRight_toLeftOf="@+id/view_line4"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+        <View
+            android:id="@+id/view_line4"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_bule_1e1eb6"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintLeft_toRightOf="@+id/finished"
+            app:layout_constraintRight_toLeftOf="@+id/undone"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+        <TextView
+            android:id="@+id/undone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintLeft_toRightOf="@+id/view_line4"
+            app:layout_constraintRight_toLeftOf="@+id/view_line5"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+        <View
+            android:id="@+id/view_line5"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:background="@color/color_gray_99"
+            app:layout_constraintBottom_toBottomOf="@+id/count"
+            app:layout_constraintLeft_toRightOf="@+id/undone"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/count" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <View
+        android:id="@+id/view_line6"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_bule_1e1eb6" />
+
+</LinearLayout>

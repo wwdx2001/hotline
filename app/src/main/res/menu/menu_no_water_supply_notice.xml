@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_filter"
+        android:title="@string/menu_search"
+        android:icon="@mipmap/ic_menu_search"
+        app:showAsAction="always"/>
+
+    <!--<item-->
+        <!--android:id="@+id/action_search"-->
+        <!--android:icon="@mipmap/ic_menu_search"-->
+        <!--android:title="@string/menu_search"-->
+        <!--app:actionViewClass="android.support.v7.widget.SearchView"-->
+        <!--app:showAsAction="ifRoom|collapseActionView"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/action_calendar"-->
+        <!--android:title="@string/menu_calendar"-->
+        <!--android:icon="@mipmap/ic_menu_calendar"-->
+        <!--app:showAsAction="always"/>-->
+
+    <!--<item-->
+        <!--android:id="@+id/action_category"-->
+        <!--android:title="@string/menu_category"-->
+        <!--android:icon="@mipmap/ic_menu_category"-->
+        <!--app:showAsAction="always" >-->
+
+        <!--<menu>-->
+            <!--<group android:checkableBehavior="single">-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_all"-->
+                    <!--android:title="@string/menu_category_all" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_plan_stop_water"-->
+                    <!--android:title="@string/menu_category_plan_stop_water" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_take_water"-->
+                    <!--android:title="@string/menu_category_take_water" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_maintain"-->
+                    <!--android:title="@string/menu_category_maintain" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_repair"-->
+                    <!--android:title="@string/menu_category_repair" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_burst_pipe"-->
+                    <!--android:title="@string/menu_category_burst_pipe" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_self_check"-->
+                    <!--android:title="@string/menu_category_self_check" />-->
+                <!--<item-->
+                    <!--android:id="@+id/action_category_other"-->
+                    <!--android:title="@string/menu_category_other" />-->
+            <!--</group>-->
+
+        <!--</menu>-->
+    <!--</item>-->
+</menu>

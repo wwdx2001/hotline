@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:background="@color/color_gray_f2">
+
+  <include
+    layout="@layout/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize" />
+
+  <View
+    android:id="@+id/line"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_below="@+id/top_navigation"
+    android:background="@color/color_gray_666E81"
+    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+  <LinearLayout
+    android:id="@+id/ll_tab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white_ffffff"
+    android:orientation="vertical"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@+id/line">
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="@dimen/margin_15"
+      android:layout_marginRight="@dimen/margin_15"
+      android:orientation="horizontal"
+      android:paddingTop="@dimen/margin_10"
+      android:paddingBottom="@dimen/margin_10">
+
+      <View
+        android:id="@+id/view_line3"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_marginRight="@dimen/margin_10"
+        android:background="@drawable/line_blue_bg_shape" />
+
+      <TextView
+        style="@style/edt_mid_black_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未完成工单："
+        android:textSize="@dimen/textsize_16"
+        android:textStyle="bold" />
+
+      <TextView
+        android:id="@+id/tv_wwcgds"
+        style="@style/edt_mid_black_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/color_red_ff0000"
+        android:textSize="@dimen/textsize_16"
+        android:textStyle="bold" />
+
+      <EditText
+        android:id="@+id/et_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_10"
+        android:layout_weight="1"
+        android:background="@drawable/et_bg_white"
+        android:hint="输入用户号查找"
+        android:imeOptions="actionSearch"
+        android:inputType="number"
+        android:maxLength="9"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingTop="@dimen/margin_8"
+        android:paddingRight="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_8"
+        android:textSize="@dimen/sp_14" />
+
+
+    </LinearLayout>
+
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/ll_statistics_control"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white_ffffff"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/margin_5"
+    android:paddingBottom="@dimen/margin_5"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@+id/ll_tab">
+
+    <View
+      android:id="@+id/line1"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_weight="1"
+      android:background="@color/color_gray_99" />
+
+    <TextView
+      android:id="@+id/txt_statistics"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/btn_overrate_border"
+      android:drawableLeft="@drawable/ic_baseline_arrow_drop_up_24"
+      android:drawableRight="@drawable/ic_baseline_arrow_drop_up_24"
+      android:drawablePadding="@dimen/margin_10"
+      android:gravity="center"
+      android:paddingStart="@dimen/margin_10"
+      android:paddingEnd="@dimen/margin_10"
+      android:text="数据统计" />
+
+    <View
+      android:id="@+id/line2"
+      android:layout_width="0dp"
+      android:layout_height="1dp"
+      android:layout_weight="1"
+      android:background="@color/color_gray_99" />
+
+  </LinearLayout>
+
+  <View
+    android:id="@+id/view_line"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:layout_marginTop="@dimen/margin_5"
+    android:layout_marginBottom="@dimen/margin_5"
+    android:background="@color/color_gray_99"
+    android:visibility="gone"
+    app:layout_constraintTop_toBottomOf="@+id/ll_statistics_control" />
+
+  <android.support.v4.widget.SwipeRefreshLayout
+    android:id="@+id/swiperefresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_below="@+id/view_line"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintRight_toLeftOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/view_line">
+
+    <android.support.v7.widget.RecyclerView
+      android:id="@+id/recyclerview"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+
+  </android.support.v4.widget.SwipeRefreshLayout>
+
+</android.support.constraint.ConstraintLayout>

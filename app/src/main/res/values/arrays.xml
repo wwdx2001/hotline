@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="main_names">
+<!--        <item>我的工单</item>-->
+<!--        <item>已处理工单</item>-->
+        <item>非居超定额</item>
+<!--        <item>自开单</item>-->
+<!--        <item>自开单记录</item>-->
+<!--        <item>账户查询</item>-->
+        <!--<item>工单查询</item>-->
+<!--        <item>停水任务</item>-->
+        <!--<item>知识库</item>-->
+<!--        <item>使用手册</item>-->
+<!--        <item>设置</item>-->
+<!--        <item>催缴公告</item>-->
+    </string-array>
+
+    <string-array name="non_resident_overrate">
+<!--        <item>超定额自开单</item>-->
+        <item>超定额发单</item>
+        <item>超定额催缴</item>
+    </string-array>
+
+    <string-array name="main_icons">
+        <item>@mipmap/ic_home_mytask</item>
+        <item>@mipmap/ic_home_historytask</item>
+        <item>@mipmap/ic_home_create_self_order</item>
+        <item>@mipmap/ic_home_create_self_order_history</item>
+        <item>@mipmap/ic_home_query_bill</item>
+        <item>@mipmap/ic_home_no_water_supply_notice</item>
+        <item>@mipmap/ic_home_knowledge_base</item>
+        <item>@mipmap/ic_home_setting</item>
+    </string-array>
+
+    <string-array name="main_ids">
+        <item>1001</item>
+        <item>1002</item>
+        <item>1003</item>
+        <item>1004</item>
+        <item>1005</item>
+        <item>1006</item>
+        <item>1007</item>
+        <item>1008</item>
+    </string-array>
+
+    <string-array name="notice_type">
+        <item>计划停水</item>
+        <item>接水</item>
+        <item>维修</item>
+        <item>抢修</item>
+        <item>爆管</item>
+        <item>自检</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="collection_backfilling_arrays">
+        <item>已催无人</item>
+        <item>已催客户拒收</item>
+        <item>客户已缴</item>
+        <item>已催有人</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="collection_backfilling_information_change_arrays">
+        <item>否</item>
+        <item>是</item>
+    </string-array>
+</resources>

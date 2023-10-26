@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/my_order_list_item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:contentDescription="@string/text_my_order_list_item_cardview"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/radius_6">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="8dp">
+
+
+        <!--工单编号-->
+        <TextView
+            android:id="@+id/my_order_list_item_tv_order_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="8dp"
+            android:text="982342342234"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_18"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+
+        <!--        是否超期-->
+        <TextView
+            android:id="@+id/tv_is_chaoqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="已超期"
+            android:textColor="@color/color_red_ff0000"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_18"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_order_number"
+            card_view:layout_constraintLeft_toRightOf="@+id/my_order_list_item_tv_order_number"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_order_number" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#d2d2d2"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_order_number">
+
+        </View>
+
+        <View
+            android:id="@+id/view_bg"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            card_view:layout_constraintBottom_toTopOf="@+id/line1"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="5dp"
+            android:minEms="5"
+            android:text="@string/text_zhbh"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/tv_acctId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoLink="all"
+            android:enabled="false"
+            android:text="1761122209899"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv0"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv0"
+            card_view:layout_constraintRight_toLeftOf="@+id/iv_icon"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv0" />
+
+        <View
+            android:id="@+id/view_navigation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv_acctId"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv_acctId"
+            card_view:layout_constraintRight_toRightOf="@+id/tv_acctId"
+            card_view:layout_constraintTop_toTopOf="@+id/tv_acctId" />
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_next2"
+            android:visibility="gone"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv0"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv0" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="5dp"
+            android:minEms="5"
+            android:text="@string/text_lianxidianhua"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_acctId" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="1761122209899"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv1"
+            card_view:layout_constraintRight_toLeftOf="@+id/ib_phone"
+            card_view:layout_constraintTop_toTopOf="@+id/tv1" />
+
+        <ImageButton
+            android:id="@+id/ib_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/ic_details_call"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_phone"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_phone" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_fashengdizhi"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv1"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_phone" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="上海"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv2"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv2" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_fanyingren"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv2"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_address" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_reflect_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="反映人"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv3"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv3" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_fanyinglaiyuan"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv3"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_reflect_person" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_reflect_origin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="反应来源"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv4"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv4" />
+
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_fanyingleixing"
+            android:textColor="@color/color_gray_767676"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv4"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_reflect_origin" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_reflect_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="反应类型"
+            android:textColor="@color/color_black_2"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv5"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv5" />
+
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_fanyingneirong"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv5"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_reflect_type" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_reflect_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="反应内容"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv6"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv6" />
+
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_chulishixian"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv6"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_tv_reflect_content" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_handle_tv_time_limit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="处理时限"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/tv7"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv7"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv7" />
+
+        <TextView
+            android:id="@+id/tv7_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_yysj"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv7"
+            card_view:layout_constraintTop_toBottomOf="@+id/my_order_list_item_handle_tv_time_limit" />
+
+        <TextView
+            android:id="@+id/tv_yysj"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="预约时间"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv7_add"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv7_add" />
+
+        <TextView
+            android:id="@+id/tv8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:minEms="5"
+            android:text="@string/text_shenpi_beizhu"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toLeftOf="@+id/tv7_add"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_yysj" />
+
+        <TextView
+            android:id="@+id/tv_shenpi_beizhu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="审批备注"
+            android:textColor="@color/color_red_ff0000"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintLeft_toRightOf="@+id/tv8"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/tv8" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group_shenpi_beizhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            card_view:constraint_referenced_ids="tv8,tv_shenpi_beizhu" />
+
+        <TextView
+            android:id="@+id/my_order_list_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/margin_15"
+            android:text="待接收"
+            android:textColor="@color/text_item"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_order_number"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_order_number" />
+
+
+        <View
+            android:id="@+id/line2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="#d2d2d2"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv8">
+
+        </View>
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_receive"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@mipmap/ic_has_received_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/text_receive"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintHorizontal_chainStyle="spread_inside"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toLeftOf="@+id/my_order_list_item_tv_delay"
+            card_view:layout_constraintTop_toBottomOf="@+id/line2" />
+
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_delay_order_gray_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/label_delay"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_receive"
+            card_view:layout_constraintLeft_toRightOf="@+id/my_order_list_item_tv_receive"
+            card_view:layout_constraintRight_toLeftOf="@+id/my_order_list_item_tv_back"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_receive" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_back_order_gray_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/label_charge_back"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_delay"
+            card_view:layout_constraintLeft_toRightOf="@+id/my_order_list_item_tv_delay"
+            card_view:layout_constraintRight_toLeftOf="@+id/my_order_list_item_tv_handle"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_delay" />
+
+        <TextView
+            android:id="@+id/my_order_list_item_tv_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:drawableLeft="@mipmap/ic_handle_order_gray_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/label_handle"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintBottom_toBottomOf="@+id/my_order_list_item_tv_back"
+            card_view:layout_constraintLeft_toRightOf="@+id/my_order_list_item_tv_back"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toTopOf="@+id/my_order_list_item_tv_back" />
+
+        <android.support.constraint.Group
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            card_view:constraint_referenced_ids="my_order_list_item_tv_receive,
+            my_order_list_item_tv_delay,my_order_list_item_tv_back,my_order_list_item_tv_handle" />
+
+        <TextView
+            android:id="@+id/history_orders_item_tv_data_isupload"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:drawableLeft="@mipmap/ic_cloud_uploaded_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:text="@string/label_has_uploaded"
+            android:textSize="@dimen/textsize_14"
+            card_view:layout_constraintHorizontal_chainStyle="spread_inside"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/line2" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

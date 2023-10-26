@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingRight="@dimen/margin_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="用户号/账户编号："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_zhanghubh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="行政区："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_xinngzhengq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="涉水代码："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <TextView
+                android:id="@+id/tv_sheshuidm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tyshxydm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt3">
+
+            <TextView
+                android:id="@+id/txt4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="统一社会信用代码："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_tongyishxydm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入统一社会信用代码"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14"
+                app:met_helperTextAlwaysShown="true"
+                app:met_helperTextColor="@color/color_red_ff0000"
+                app:met_underlineColor="@color/color_gray_33"
+                app:met_floatingLabelText=""
+                app:met_floatingLabel="normal" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="客户名称："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_kehumc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入客户名称"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14"
+                app:met_helperTextAlwaysShown="true"
+                app:met_helperTextColor="@color/color_red_ff0000"
+                app:met_underlineColor="@color/color_gray_33"
+                app:met_floatingLabelText=""
+                app:met_floatingLabel="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="联系人："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_lianxir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入联系人"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14"
+                app:met_helperTextAlwaysShown="true"
+                app:met_helperTextColor="@color/color_red_ff0000"
+                app:met_underlineColor="@color/color_gray_33"
+                app:met_floatingLabelText=""
+                app:met_floatingLabel="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="联系方式："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_lianxifs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入联系方式"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14"
+                app:met_helperTextAlwaysShown="true"
+                app:met_helperTextColor="@color/color_red_ff0000"
+                app:met_underlineColor="@color/color_gray_33"
+                app:met_floatingLabelText=""
+                app:met_floatingLabel="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="邮寄地址："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <com.rengwuxian.materialedittext.MaterialEditText
+                android:id="@+id/et_youjidz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请输入邮寄地址"
+                android:minLines="3"
+                android:textColor="@color/color_gray_33"
+                android:textSize="@dimen/textsize_14"
+                app:met_helperTextAlwaysShown="true"
+                app:met_helperTextColor="@color/color_red_ff0000"
+                app:met_underlineColor="@color/color_gray_33"
+                app:met_floatingLabelText=""
+                app:met_floatingLabel="normal" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_linear_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="8"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="备注："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+            <EditText
+                android:id="@+id/et_beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请填写备注"
+                android:minLines="3"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0176da</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_0176da">#5188EC</color>
+
+    <!-- 红 -->
+    <color name="color_red_ff0000">#ff0000</color>
+    <color name="color_red_2CFF0000">#2DFF0000</color>
+    <color name="color_transt">#00000000</color>
+    <color name="color_red_fdb1b3">#55fdb1b3</color>
+    <color name="color_red_f7cdd6">#f7cdd6</color>
+
+    <!-- 橙 -->
+    <color name="color_orange_ffa042">#ffa042</color>
+    <color name="color_orange_F8CB7F">#FFF8CB7F</color>
+
+    <!-- 黄 -->
+    <color name="color_yellow_ffff37">#ffff37</color>
+
+    <!-- 绿 -->
+    <color name="color_green_00bb00">#00bb00</color>
+    <color name="color_orange_76DA91">#FF76DA91</color>
+
+    <!-- 蓝 -->
+    <color name="color_bule_0000ff">#0000ff</color>
+    <color name="color_bule_1e1eb6">#1E1EB6</color>
+    <color name="color_blue_0176da">#0176da</color>
+    <color name="color_blue_63B2EE">#FF63B2EE</color>
+    <color name="color_bule_1E90FF">#1E90FF</color>
+    <color name="color_blue">#FF1E90FF</color>
+
+    <!-- 紫 -->
+    <color name="color_bule_ae57a4">#ae57a4</color>
+
+    <!-- 黑 -->
+    <color name="color_black_000000">#000000</color>
+    <color name="color_black_2">#110F0F</color>
+  <color name="color_text_black">#2E2A2A</color>
+
+    <!-- 白 -->
+    <color name="color_white_ffffff">#ffffff</color>
+
+    <!-- 灰 -->
+    <color name="color_gray_33">#333333</color>
+    <color name="color_bg">#F5F2F2</color>
+    <color name="color_gray_66">#666666</color>
+    <color name="color_gray_99">#999999</color>
+    <color name="color_gray_adadad">#adadad</color>
+    <color name="color_gray_666E81">#666E81</color>
+    <color name="color_gray_767676">#767676</color>
+    <color name="color_gray_d2d2d2">#d2d2d2</color>
+    <color name="color_gray_8a">#8a8a8a</color>
+    <color name="color_gray_ee">#eeeeee</color>
+    <color name="color_gray_f2">#f2f2f2</color>
+    <color name="color_gray_6e">#6E6E6E</color>
+    <color name="gray">#E6E6E6</color>
+
+
+  <!--分割线颜色-->
+    <color name="color_gray_divider">#f8f8f8</color>
+    <color name="color_gray_ea_divider">#eaeaea</color>
+
+    <!--底部导航背景颜色-->
+    <color name="color_gray_bottom">#fafafa</color>
+
+    <!-- 背景，淡蓝色，抄表任务，册本列表，基本信息 -->
+    <color name="background_listitem">#e3eff9</color>
+    <!-- 内容文本区的颜色、抄表录入、客户详情 -->
+    <color name="text_content">#305b87</color>
+    <color name="text_content_1">#a6dbfa</color>
+    <!-- 列表内容，字体颜色 -->
+    <color name="text_item">#0eb185</color>
+
+    <color name="darker_gray">#808080</color>
+
+    <color name="toast_error_color">#D50000</color>
+
+</resources>

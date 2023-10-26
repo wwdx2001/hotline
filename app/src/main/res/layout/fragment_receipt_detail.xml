@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_xiaogenhao"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_xiaogenhao"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_huming"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_huming"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fanyingren"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fanyingren"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--发生地址-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fashengdizhi"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fashengdizhi"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--联系电话-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_lianxidianhua"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_lianxidianhua"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--反应类型-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fanyingleixing"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fanyingleixing"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--反应内容-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fanyingneirong"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fanyingneirong"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--反应区名-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fanyingquming"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fanyingquming"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/height_50"
+            android:gravity="center_vertical">
+            <!--反映来源-->
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_fanyinglaiyuan"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_fanyinglaiyuan"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="true"
+                android:text="-"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:textSize="@dimen/textsize_16"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+            <!--处理类别-->
+            <TextView
+                android:id="@+id/text_handle_type"
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_chulijibie"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_chulijibie"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_shoulibeizhu"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_shoulibeizhu"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text="-"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_50">
+
+            <TextView
+                android:layout_width="@dimen/width_90"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="@string/text_xianchangchuli"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <CheckBox
+                android:id="@+id/cb_xianchangchuli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:clickable="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

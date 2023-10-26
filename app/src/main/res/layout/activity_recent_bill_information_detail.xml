@@ -1,0 +1,1596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_0176da"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_10">
+
+                <!--自来水公司-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zilaishuigongsii"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zilaishuigongsi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--站点-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhandian"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhandian"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--开账编号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_kaizhangbianhao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_kaizhangbianhao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--册号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_cehao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_cehao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用户名-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yonghuming"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yonghuming"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--地址-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_dizhi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_dizhi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用户类别-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yonghuleibie"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yonghuleibie"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--账号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhanghao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhanghao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--账单类型-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhangdanleixing"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhangdanleixing"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--开户银行-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_kaihuyinhang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_kaihuyinhang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--户号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_huhao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_huhao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用水价-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yongshuijia"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yongshuijia"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--排水价-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_paishuijia"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_paishuijia"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--折扣率-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhekoulv"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhekoulv"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--排水率-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_paishuilv"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_paishuilv"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--调价号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_tiaojiahao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_tiaojiahao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--块号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_kuaihao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_kuaihao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--抄次-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_chaoci"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_chaoci"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--次代码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_cidaima"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_cidaima"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--抄表日期-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_chaobiaoriqi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_chaobiaoriqi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--抄表状态-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_chaobiaozhuangtai"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_chaobiaozhuangtai"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--抄表员-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_chaobiaoyuan"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_chaobiaoyuan"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--上次抄码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shangcichaoma"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shangcichaoma"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--上次水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shangcishuiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shangcishuiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--上次余额-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shangciyue"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shangciyue"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--本次抄码-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_bencichaoma"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_bencichaoma"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yongshuilinag"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yongshuilinag"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用水费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yongshuifei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yongshuifei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--补点数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_budianshu"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_budianshu"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--排水费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_paishuifei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_paishuifei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--应收金额-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yingshoujine"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yingshoujine"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--滞纳金-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhinajin"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhinajin"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--手续费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shouxufei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shouxufei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--本次余额-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_benciyue"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_benciyue"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--实收金额-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shishoujine"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shishoujine"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--抄表标志-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_chaobiaobiaozhi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_chaobiaobiaozhi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--打印数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_dayinshu"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_dayinshu"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--销账标志-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiaozhangbiaozhi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiaozhangbiaozhi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--销账编号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiaozhangbianma"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiaozhangbianma"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--销账日期-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiaozhangriqi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiaozhangriqi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--销账员-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiaozhangyuan"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiaozhangyuan"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--转账托收-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_zhuanzhangtuoshou"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_zhuanzhangtuoshou"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第一阶梯户年用水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_diyijietihunianyongshuiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_diyijietihunianyongshuiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第一阶梯水量区间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_diyijietishuiliangqujian"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_diyijietishuiliangqujian"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第二阶梯户年用水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_dierjietihunianyongshuiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_dierjietihunianyongshuiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第二阶梯水量区间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_dierjietishuiliangqujian"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_dierjietishuiliangqujian"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第三阶梯户年用水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_disanjietihunianyongshuiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_disanjietihunianyongshuiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--第三阶梯水量区间-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_disanjietishuiliangqujian"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_disanjietishuiliangqujian"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--年累计量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_nianleijiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_nianleijiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--基内用水量-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_jineiyongshuiliang"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_jineiyongshuiliang"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--基外排水费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_jiwaipaishuifei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_jiwaipaishuifei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--基内用水费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_jineiyongshuifei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_jineiyongshuifei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--基外用水费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_jiwaiyongshuifei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_jiwaiyongshuifei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--排水基数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_paishuijishu"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_paishuijishu"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--用水基数-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_yongshuijishu"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_yongshuijishu"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--消防费-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiaofangfei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiaofangfei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--收费方式-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shoufeifangshi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shoufeifangshi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--计划用水-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_jihuayongshui"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_jihuayongshui"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--口径-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_koujing"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_koujing"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--筒号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_tonghao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_tonghao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--量程-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_liangcheng"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_liangcheng"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--表分类-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_biaofenlei"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_biaofenlei"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--表号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_biaohao"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_biaohao"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--上报标志-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_shangbaobiaozhi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_shangbaobiaozhi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <!--下送标志-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_50">
+
+                    <TextView
+                        android:layout_width="@dimen/width_90"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="@string/text_xiasongbiaozhi"
+                        android:textSize="@dimen/textsize_16" />
+
+                    <TextView
+                        android:id="@+id/tv_xiasongbiaozhi"
+                        android:layout_width="@dimen/width_200"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_10"
+                        android:text=""
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+

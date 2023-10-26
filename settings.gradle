@@ -1,0 +1,2 @@
+include ':zbarlibary'
+include ':app', ':localprovider', ':serverprovider', ':dataprovider'

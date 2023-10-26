@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_receipt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/margin_3"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_5"
+    android:layout_marginRight="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_5">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constriant_receipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_5"
+        android:paddingRight="@dimen/margin_5"
+        android:paddingBottom="@dimen/margin_5">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="序号："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_xuhao"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:ems="4"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv1"
+            app:layout_constraintLeft_toRightOf="@+id/tv1"
+            app:layout_constraintRight_toLeftOf="@+id/tv2"
+            app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="派单类型："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/tv_xuhao"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_paidanlx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/color_0176da"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv2"
+            app:layout_constraintLeft_toRightOf="@+id/tv2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv2" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="#8a8a8a"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="用户号："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv1"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/tv_yonghuhao"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv3"
+            app:layout_constraintLeft_toRightOf="@+id/tv3"
+            app:layout_constraintRight_toLeftOf="@id/tv4"
+            app:layout_constraintTop_toTopOf="@+id/tv3" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="行政区："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/tv_yonghuhao"
+            app:layout_constraintRight_toLeftOf="@+id/tv_xingzhengq"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/tv_xingzhengq"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv4"
+            app:layout_constraintLeft_toRightOf="@+id/tv4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="客户名称："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv3"
+            app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+        <TextView
+            android:id="@+id/tv_kehumc"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv5"
+            app:layout_constraintLeft_toRightOf="@+id/tv5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv5" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="邮寄地址："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv5"
+            app:layout_constraintTop_toBottomOf="@+id/tv5" />
+
+        <TextView
+            android:id="@+id/tv_youjidz"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv6"
+            app:layout_constraintLeft_toRightOf="@+id/tv6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+        <TextView
+            android:id="@+id/tv7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:text="欠费金额："
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv6"
+            app:layout_constraintTop_toBottomOf="@+id/tv6" />
+
+        <TextView
+            android:id="@+id/tv_qianfeije"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/color_red_ff0000"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv7"
+            app:layout_constraintLeft_toRightOf="@+id/tv7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv7" />
+
+        <View
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:background="#8a8a8a"
+            app:layout_constraintTop_toBottomOf="@+id/tv7" />
+
+        <TextView
+            android:id="@+id/txt_advent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:text="已临期"
+            android:textColor="@color/color_red_ff0000"
+            android:textSize="@dimen/textsize_16"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/txt_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_delay_order_blue_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="@string/label_delay"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/color_blue"
+            app:layout_constraintLeft_toRightOf="@+id/txt_advent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/txt_chargeback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_back_order_blue_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="@string/label_charge_back"
+            android:textSize="@dimen/textsize_14"
+            android:textColor="@color/color_blue"
+            app:layout_constraintLeft_toRightOf="@+id/txt_delay"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+        <TextView
+            android:id="@+id/txt_operate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_handle_order_blue_48px"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:padding="@dimen/margin_10"
+            android:text="操作"
+            android:textColor="@color/color_blue"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1" />
+
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

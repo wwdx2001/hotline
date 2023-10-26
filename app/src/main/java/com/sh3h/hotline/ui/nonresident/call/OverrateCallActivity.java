@@ -1,0 +1,806 @@
+package com.sh3h.hotline.ui.nonresident.call;
+
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.annotation.RequiresApi;
+import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.WindowManager;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+
+import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.StringUtils;
+import com.blankj.utilcode.util.TimeUtils;
+import com.blankj.utilcode.util.ToastUtils;
+import com.chad.library.adapter.base.BaseQuickAdapter;
+import com.maning.mndialoglibrary.MProgressDialog;
+import com.sh3h.dataprovider.URL;
+import com.sh3h.dataprovider.data.entity.response.CustomerInfoFindResult;
+import com.sh3h.dataprovider.http.CustomApiResult;
+import com.sh3h.dataprovider.http.CustomCallBack;
+import com.sh3h.dataprovider.util.Constant;
+import com.sh3h.hotline.R;
+import com.sh3h.hotline.adapter.CallListAdapter;
+import com.sh3h.hotline.adapter.CallTabStatisticsAdapter;
+import com.sh3h.hotline.entity.CallListEntity;
+import com.sh3h.hotline.entity.CallTabStatisticsEntity;
+import com.sh3h.hotline.entity.ReceiptListEntity;
+import com.sh3h.hotline.ui.base.ParentActivity;
+import com.sh3h.hotline.ui.bill.detail.UserDetailInformationActivity;
+import com.sh3h.hotline.ui.nonresident.receipt.OverrateReceiptActivity;
+import com.sh3h.hotline.ui.nonresident.receipt.OverrateReceiptHandleActivity;
+import com.sh3h.hotline.ui.order.myorder.list.MyOrderListActivity;
+import com.sh3h.hotline.util.CollectionUtils;
+import com.sh3h.hotline.util.DisplayUtils;
+import com.sh3h.hotline.view.CustomGoodsCounterView;
+import com.sh3h.hotline.view.PopupWindowFilter;
+import com.sh3h.hotline.view.TabLayoutView.TabLayout;
+import com.zhouyou.http.EasyHttp;
+import com.zhouyou.http.callback.CallBackProxy;
+import com.zhouyou.http.callback.SimpleCallBack;
+import com.zhouyou.http.exception.ApiException;
+
+import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+import io.reactivex.disposables.Disposable;
+
+public class OverrateCallActivity extends ParentActivity implements View.OnClickListener, BaseQuickAdapter.OnItemClickListener, BaseQuickAdapter.OnItemChildClickListener {
+
+    @BindView(R.id.m_tab)
+    TabLayout mTabLayout;
+
+    @BindView(R.id.tab_recyclerview)
+    RecyclerView mTabRecyclerView;
+
+    @BindView(R.id.swiperefresh_layout)
+    SwipeRefreshLayout mSwipeRefreshLayout;
+
+    @BindView(R.id.recyclerview)
+    RecyclerView mRecyclerView;
+
+    @BindView(R.id.ll_statistics_control)
+    LinearLayout llStatisticsControl;
+
+    @BindView(R.id.txt_statistics)
+    TextView txtStatistics;
+
+    @BindView(R.id.line)
+    View line;
+
+    @BindView(R.id.ll_tab)
+    RelativeLayout llTab;
+
+    private Toolbar toolbar;
+
+    private Integer[] titles = {R.string.radio_button_picih,R.string.radio_button_gongdans, R.string.radio_button_yiwancs,
+            R.string.radio_button_weiwancs};
+
+    private List<CallTabStatisticsEntity> tabItemBeans;
+
+    private CallTabStatisticsAdapter mTabAdapter;
+
+    private List<CallListEntity> itemBeans;
+    private List<CallListEntity> adventList;
+    private List<CallListEntity> nomalList;
+
+    private CallListAdapter mAdapter;
+
+    private Unbinder mUnbinder;
+
+    private MenuItem menuItem;
+
+    private PopupWindowFilter popWinFilter;
+
+    private static String filter_sort = "asc";
+    private static String filter_match = "xh";
+
+    private Disposable mDisposable1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_overrate_call);
+
+        mUnbinder = ButterKnife.bind(this);
+
+        toolbar = initToolBar(R.string.label_overrate_call);
+
+        initView();
+
+        initData();
+    }
+
+    private void initView() {
+        llStatisticsControl.setOnClickListener(this);
+
+        initTab(mTabLayout);
+        initTabRecyclerView();
+        initRecyclerView();
+    }
+
+    private void initTab(TabLayout view) {
+        for (int i = 0; i < titles.length; i++) {
+            TabLayout.Tab tab = view.newTab();
+            tab.setText(titles[i]);
+            // tab.setIcon(R.mipmap.ic_launcher);//icon会显示在文字上面
+            view.addTab(tab);
+        }
+
+        llTab.setVisibility(View.GONE);
+        llStatisticsControl.setVisibility(View.GONE);
+    }
+
+    private void initTabRecyclerView() {
+        tabItemBeans = new ArrayList<>();
+        mTabAdapter = new CallTabStatisticsAdapter(R.layout.item_call_tab_statistics, tabItemBeans);
+        //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
+        mTabRecyclerView.setHasFixedSize(true);
+        mTabRecyclerView.setNestedScrollingEnabled(true);
+        mTabRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mTabRecyclerView.setAdapter(mTabAdapter);
+    }
+
+    private void initRecyclerView() {
+        //刷新控件
+        SwipeRefreshLayout.OnRefreshListener listener = new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                notifyData();
+            }
+        };
+
+        mSwipeRefreshLayout.setColorSchemeResources(android.R.color.holo_blue_light);
+        mSwipeRefreshLayout.setOnRefreshListener(listener);
+
+        itemBeans = new ArrayList<>();
+        mAdapter = new CallListAdapter(R.layout.item_call_list_new, itemBeans);
+        mAdapter.setOnItemChildClickListener(this);
+        mAdapter.setOnItemClickListener(this);
+        //如果可以确定每个item的高度是固定的，设置这个选项可以提高性能
+        mRecyclerView.setHasFixedSize(true);
+        mRecyclerView.setNestedScrollingEnabled(true);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.setAdapter(mAdapter);
+    }
+
+    private void initData() {
+//        CallTabStatisticsEntity tabStatisticsEntity = new CallTabStatisticsEntity();
+//        tabStatisticsEntity.setGongDanS("42");
+//        tabStatisticsEntity.setYiwanCS("20");
+//        tabStatisticsEntity.setWeiWanCS("22");
+//        tabItemBeans.add(tabStatisticsEntity);
+//
+//        CallTabStatisticsEntity tabStatisticsEntity1 = new CallTabStatisticsEntity();
+//        tabStatisticsEntity1.setGongDanS("20");
+//        tabStatisticsEntity1.setYiwanCS("16");
+//        tabStatisticsEntity1.setWeiWanCS("4");
+//        tabItemBeans.add(tabStatisticsEntity1);
+//
+//        CallTabStatisticsEntity tabStatisticsEntity2 = new CallTabStatisticsEntity();
+//        tabStatisticsEntity2.setGongDanS("20");
+//        tabStatisticsEntity2.setYiwanCS("8");
+//        tabStatisticsEntity2.setWeiWanCS("12");
+//        tabItemBeans.add(tabStatisticsEntity2);
+//
+//        CallTabStatisticsEntity tabStatisticsEntity3 = new CallTabStatisticsEntity();
+//        tabStatisticsEntity3.setGongDanS("42");
+//        tabStatisticsEntity3.setYiwanCS("12");
+//        tabStatisticsEntity3.setWeiWanCS("19");
+//        tabItemBeans.add(tabStatisticsEntity3);
+//
+//        mTabAdapter.notifyDataSetChanged();
+
+        showProgress("加载数据中,请稍后");
+        tabItemBeans.clear();
+        EasyHttp
+                .post(URL.CuJIaoGDSelFJCount)
+                .execute(new CallBackProxy<CustomApiResult<List<CallTabStatisticsEntity>>,
+                        List<CallTabStatisticsEntity>>(new CustomCallBack<List<CallTabStatisticsEntity>>() {
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        super.onError(e);
+                        hideProgress();
+                    }
+
+                    @Override
+                    public void onSuccess(final List<CallTabStatisticsEntity> mNetWorkDatas) {
+                        LogUtils.e(mNetWorkDatas.toString());
+                        llTab.setVisibility(View.VISIBLE);
+                        llStatisticsControl.setVisibility(View.VISIBLE);
+                        tabItemBeans.addAll(mNetWorkDatas);
+                        mTabAdapter.notifyDataSetChanged();
+
+                        getListData();
+                    }
+                }) {
+                });
+
+    }
+
+    private void getListData() {
+        //        CallListEntity callListEntity = new CallListEntity();
+//        callListEntity.setXuHao("1/10");
+//        callListEntity.setZhangHuBH("3213124242");
+//        callListEntity.setXingZhengQ("普陀区");
+//        callListEntity.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity);
+//
+//        CallListEntity callListEntity1 = new CallListEntity();
+//        callListEntity1.setXuHao("2/10");
+//        callListEntity1.setZhangHuBH("3213124242");
+//        callListEntity1.setXingZhengQ("普陀区");
+//        callListEntity1.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity1.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity1.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity1);
+//
+//        CallListEntity callListEntity2 = new CallListEntity();
+//        callListEntity2.setXuHao("3/10");
+//        callListEntity2.setZhangHuBH("3213124242");
+//        callListEntity2.setXingZhengQ("普陀区");
+//        callListEntity2.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity2.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity2.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity2);
+//
+//        CallListEntity callListEntity3 = new CallListEntity();
+//        callListEntity3.setXuHao("4/10");
+//        callListEntity3.setZhangHuBH("3213124242");
+//        callListEntity3.setXingZhengQ("普陀区");
+//        callListEntity3.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity3.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity3.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity3);
+//
+//        CallListEntity callListEntity4 = new CallListEntity();
+//        callListEntity4.setXuHao("5/10");
+//        callListEntity4.setZhangHuBH("3213124242");
+//        callListEntity4.setXingZhengQ("普陀区");
+//        callListEntity4.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity4.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity4.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity4);
+//
+//        CallListEntity callListEntity5 = new CallListEntity();
+//        callListEntity5.setXuHao("6/10");
+//        callListEntity5.setZhangHuBH("3213124242");
+//        callListEntity5.setXingZhengQ("普陀区");
+//        callListEntity5.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity5.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity5.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity5);
+//
+//        CallListEntity callListEntity6 = new CallListEntity();
+//        callListEntity6.setXuHao("7/10");
+//        callListEntity6.setZhangHuBH("3213124242");
+//        callListEntity6.setXingZhengQ("普陀区");
+//        callListEntity6.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity6.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity6.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity6);
+//
+//        CallListEntity callListEntity7 = new CallListEntity();
+//        callListEntity7.setXuHao("8/10");
+//        callListEntity7.setZhangHuBH("3213124242");
+//        callListEntity7.setXingZhengQ("普陀区");
+//        callListEntity7.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity7.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity7.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity7);
+//
+//        CallListEntity callListEntity8 = new CallListEntity();
+//        callListEntity8.setXuHao("9/10");
+//        callListEntity8.setZhangHuBH("3213124242");
+//        callListEntity8.setXingZhengQ("普陀区");
+//        callListEntity8.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity8.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity8.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity8);
+//
+//        CallListEntity callListEntity9 = new CallListEntity();
+//        callListEntity9.setXuHao("10/10");
+//        callListEntity9.setZhangHuBH("3213124242");
+//        callListEntity9.setXingZhengQ("普陀区");
+//        callListEntity9.setKeHuMC("上海三高计算机中心股份有限公司");
+//        callListEntity9.setYouJiDZ("大渡河路1550弄52支弄12号502-3");
+//        callListEntity9.setQianFeiJE("30000.00");
+//        itemBeans.add(callListEntity9);
+//        mAdapter.notifyDataSetChanged();
+
+        itemBeans.clear();
+        EasyHttp
+                .post(URL.CuJIaoGDSelFJ)
+                .execute(new CallBackProxy<CustomApiResult<List<CallListEntity>>,
+                        List<CallListEntity>>(new CustomCallBack<List<CallListEntity>>() {
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+//                        showTopProgressbar(mSwipeRefreshLayout);
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        super.onError(e);
+                        hideProgress();
+//                        hideTopProgressbar(mSwipeRefreshLayout);
+                    }
+
+                    @Override
+                    public void onSuccess(final List<CallListEntity> mNetWorkDatas) {
+                        hideProgress();
+//                        hideTopProgressbar(mSwipeRefreshLayout);
+                        LogUtils.e(mNetWorkDatas.toString());
+                        riceAdventList(mNetWorkDatas);
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                        super.onCompleted();
+                        hideProgress();
+//                        hideTopProgressbar(mSwipeRefreshLayout);
+                    }
+                }) {
+                });
+    }
+
+    private void riceAdventList(List<CallListEntity> mNetWorkDatas) {
+        adventList = (List<CallListEntity>) CollectionUtils.select(mNetWorkDatas, new CollectionUtils.Predicate<CallListEntity>() {
+            @Override
+            public boolean evaluate(CallListEntity item) {
+                return ((TimeUtils.string2Millis(item.getCjqx()) - TimeUtils.getNowMills()) / (24 * 60 * 60 * 1000)) <= 3;
+            }
+        });
+
+        nomalList = (List<CallListEntity>) CollectionUtils.selectRejected(mNetWorkDatas, new CollectionUtils.Predicate<CallListEntity>() {
+            @Override
+            public boolean evaluate(CallListEntity item) {
+                return ((TimeUtils.string2Millis(item.getCjqx()) - TimeUtils.getNowMills()) / (24 * 60 * 60 * 1000)) <= 3;
+            }
+        });
+
+        adventList = filterSort(adventList);
+
+        nomalList = filterSort(nomalList);
+
+        itemBeans.addAll(adventList);
+        itemBeans.addAll(nomalList);
+
+        mAdapter.notifyDataSetChanged();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_save, menu);
+        menuItem = menu.findItem(R.id.action_save);
+        menuItem.setTitle("排序");
+        menuItem.setIcon(R.mipmap.ic_default_sort);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    // 让菜单同时显示图标和文字
+    @Override
+    public boolean onMenuOpened(int featureId, Menu menu) {
+        if (menu != null) {
+            if (menu.getClass().getSimpleName().equalsIgnoreCase("MenuBuilder")) {
+                try {
+                    Method method = menu.getClass().getDeclaredMethod("setOptionalIconsVisible", Boolean.TYPE);
+                    method.setAccessible(true);
+                    method.invoke(menu, true);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return super.onMenuOpened(featureId, menu);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        showPopupWindow();
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void showPopupWindow() {
+        if (popWinFilter == null) {
+            //自定义的单击事件
+            RadioGroup.OnCheckedChangeListener paramOnCheckedChangeListener = new OnCheckedChangeListener();
+            popWinFilter = new PopupWindowFilter(OverrateCallActivity.this, paramOnCheckedChangeListener,
+                    DisplayUtils.dipToPix(this, 160), DisplayUtils.dipToPix(this, 220));
+            //监听窗口的焦点事件，点击窗口外面则取消显示
+            popWinFilter.getContentView().setOnFocusChangeListener(new View.OnFocusChangeListener() {
+
+                @Override
+                public void onFocusChange(View v, boolean hasFocus) {
+                    if (!hasFocus) {
+                        popWinFilter.dismiss();
+                    }
+                }
+            });
+        }
+        //设置默认获取焦点
+        popWinFilter.setFocusable(true);
+        //以某个控件的x和y的偏移量位置开始显示窗口
+        popWinFilter.showAsDropDown(toolbar, toolbar.getWidth(), 0);
+        //如果窗口存在，则更新
+        popWinFilter.update();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        mUnbinder.unbind();
+        if (popWinFilter != null) {
+            popWinFilter.dismiss();
+            popWinFilter = null;
+        }
+    }
+
+    @Override
+    public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+        if (!"0".equals(itemBeans.get(position).getSfwc())) {
+            return;
+        }
+        Intent intent = new Intent(OverrateCallActivity.this, OverrateCallHandleActivity.class);
+        intent.putExtra("call", itemBeans.get(position));
+        startActivity(intent);
+    }
+
+    @Override
+    public void onItemChildClick(BaseQuickAdapter adapter, View view, final int position) {
+        switch (view.getId()) {
+            case R.id.tv_yonghuhao:
+                navigationUserInfo(position);
+                break;
+            case R.id.txt_delay:
+                AlertDialog.Builder builder = new AlertDialog.Builder(OverrateCallActivity.this);
+                View view1 = View.inflate(OverrateCallActivity.this, R.layout.dialog_receipt_delay, null);
+                final CustomGoodsCounterView customGoodsCounterView = (CustomGoodsCounterView) view1.findViewById(R.id.customGoodsCounterView);
+                customGoodsCounterView.setmMaxCount(10);
+                customGoodsCounterView.setmMinCount(1);
+                builder.setView(view1);
+                builder.setNegativeButton("取消", null);
+                builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (StringUtils.isEmpty(customGoodsCounterView.getGoodsNumber() + "")) {
+                            ToastUtils.showShort("请输入延期天数");
+                            return;
+                        }
+
+                        delay(itemBeans.get(position), customGoodsCounterView.getGoodsNumber() + "");
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+                break;
+            case R.id.txt_chargeback:
+                AlertDialog.Builder refundBuilder = new AlertDialog.Builder(OverrateCallActivity.this);
+                refundBuilder.setTitle("退单原因");
+                View refundView = View.inflate(OverrateCallActivity.this, R.layout.dialog_delay_refund, null);
+                refundView.findViewById(R.id.et_delay_day).setVisibility(View.GONE);
+                final EditText etRemark2 = (EditText) refundView.findViewById(R.id.et_remark);
+                etRemark2.setVisibility(View.GONE);
+                final EditText etReason2 = (EditText) refundView.findViewById(R.id.et_reason);
+                refundBuilder.setView(refundView);
+                refundBuilder.setNegativeButton("取消", null);
+                refundBuilder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (StringUtils.isEmpty(etReason2.getText().toString())) {
+                            ToastUtils.showShort("请输入退单原因");
+                            return;
+                        }
+                        chargeBack(itemBeans.get(position), etReason2.getText().toString().trim());
+                    }
+                });
+                AlertDialog refudnDialog = refundBuilder.create();
+                refudnDialog.show();
+                break;
+            case R.id.txt_operate:
+                if (!"0".equals(itemBeans.get(position).getSfwc())) {
+                    return;
+                }
+                Intent intent = new Intent(OverrateCallActivity.this, OverrateCallHandleActivity.class);
+                intent.putExtra("call", itemBeans.get(position));
+                startActivity(intent);
+                break;
+            default:
+                break;
+        }
+    }
+
+    /**
+     * 查询客户详细信息
+     *
+     * @param i
+     */
+    private void navigationUserInfo(int i) {
+        mDisposable1 = EasyHttp.post(URL.CustomerInfoQuery)
+                .params("acctId", mAdapter.getData().get(i).getZhbh())
+                .execute(new CallBackProxy<CustomApiResult<CustomerInfoFindResult>,
+                        CustomerInfoFindResult>(new CustomCallBack<CustomerInfoFindResult>() {
+
+                    @Override
+                    public void onStart() {
+                        MProgressDialog.showProgress(OverrateCallActivity.this, "加载中...");
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        super.onError(e);
+                    }
+
+                    @Override
+                    public void onSuccess(CustomerInfoFindResult entity) {
+                        if (entity != null) {
+                            LogUtils.i(entity.toString());
+                            Intent intent = new Intent(OverrateCallActivity.this, UserDetailInformationActivity.class);
+                            Bundle bundle = new Bundle();
+                            bundle.putParcelable(Constant.BILLBASEINFO, entity);
+                            intent.putExtras(bundle);
+                            startActivity(intent);
+                        } else {
+                            ToastUtils.showShort("没有数据");
+                        }
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                        MProgressDialog.dismissProgress();
+                    }
+                }) {
+                });
+    }
+
+    private void delay(CallListEntity entity, String delayDay) {
+        EasyHttp
+                .post(URL.CuJIaoGDDelay)
+                .params("albh", entity.getAlbh())
+                .params("wcsx", delayDay)
+                .execute(new SimpleCallBack<String>() {
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        ToastUtils.showShort(e.getMessage());
+                    }
+
+                    @Override
+                    public void onSuccess(String s) {
+                        ToastUtils.showShort("延期成功");
+                        notifyData();
+                    }
+                });
+    }
+
+    private void chargeBack(CallListEntity entity, String backReason) {
+        EasyHttp
+                .post(URL.CuJIaoGDCancel)
+                .params("albh", entity.getAlbh())
+                .params("tdyy", backReason)
+                .execute(new SimpleCallBack<String>() {
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        ToastUtils.showShort(e.getMessage());
+                    }
+
+                    @Override
+                    public void onSuccess(String s) {
+                        ToastUtils.showShort("退单成功");
+                        notifyData();
+                    }
+                });
+    }
+
+    private void notifyData() {
+        itemBeans.clear();
+        EasyHttp
+                .post(URL.CuJIaoGDSelFJ)
+                .execute(new CallBackProxy<CustomApiResult<List<CallListEntity>>,
+                        List<CallListEntity>>(new CustomCallBack<List<CallListEntity>>() {
+                    @Override
+                    public void onStart() {
+                        super.onStart();
+                        showTopProgressbar(mSwipeRefreshLayout);
+                    }
+
+                    @Override
+                    public void onError(ApiException e) {
+                        super.onError(e);
+                        hideTopProgressbar(mSwipeRefreshLayout);
+                    }
+
+                    @Override
+                    public void onSuccess(final List<CallListEntity> mNetWorkDatas) {
+                        hideTopProgressbar(mSwipeRefreshLayout);
+                        LogUtils.e(mNetWorkDatas.toString());
+                        riceAdventList(mNetWorkDatas);
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                        super.onCompleted();
+                        hideTopProgressbar(mSwipeRefreshLayout);
+                    }
+                }) {
+                });
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (llTab.getVisibility() == View.GONE) {
+            line.setVisibility(View.VISIBLE);
+            llTab.setVisibility(View.VISIBLE);
+
+            Drawable drawable = this.getResources().getDrawable(R.drawable.ic_baseline_arrow_drop_up_24);
+            drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+            txtStatistics.setCompoundDrawables(drawable, null, drawable, null);
+        } else {
+            line.setVisibility(View.GONE);
+            llTab.setVisibility(View.GONE);
+            Drawable drawable = this.getResources().getDrawable(R.drawable.ic_baseline_arrow_drop_down_24);
+            drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());
+            txtStatistics.setCompoundDrawables(drawable, null, drawable, null);
+        }
+    }
+
+    class OnCheckedChangeListener implements RadioGroup.OnCheckedChangeListener {
+
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            itemBeans.clear();
+
+            switch (checkedId) {
+                case R.id.radio_filter_asc:
+//                    ToastUtils.showLong("升序");
+                    filter_sort = "asc";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                case R.id.radio_filter_desc:
+//                    ToastUtils.showLong("降序");
+                    filter_sort = "desc";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                case R.id.radio_filter_yjdz:
+//                    ToastUtils.showLong("按邮寄地址");
+                    filter_match = "yjdz";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                case R.id.radio_filter_hh:
+//                    ToastUtils.showLong("按户号");
+                    filter_match = "hh";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                case R.id.radio_filter_xh:
+//                    ToastUtils.showLong("按序号");
+                    filter_match = "xh";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                case R.id.radio_filter_qfje:
+//                    ToastUtils.showLong("按序号");
+                    filter_match = "qfje";
+
+                    adventList = filterSort(adventList);
+                    nomalList = filterSort(nomalList);
+
+                    itemBeans.addAll(adventList);
+                    itemBeans.addAll(nomalList);
+
+                    mAdapter.notifyDataSetChanged();
+                    popWinFilter.dismiss();
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+    private List<CallListEntity> filterSort(List<CallListEntity> itemBeans) {
+        Collections.sort(itemBeans, new Comparator<CallListEntity>() {
+            @Override
+            public int compare(CallListEntity o1, CallListEntity o2) {
+              if ("asc".equals(filter_sort)) {
+                if ("yjdz".equals(filter_match)) {
+                  return o1.getYjdz().compareTo(o2.getYjdz());
+                } else if ("hh".equals(filter_match)) {
+                  return o1.getZhbh().compareTo(o2.getZhbh());
+                } else if ("qfje".equals(filter_match)) {
+                  return Double.compare(Double.parseDouble(o1.getQfzje()), Double.parseDouble(o2.getQfzje()));
+                } else {
+                  return Integer.parseInt(o1.getXh()) - Integer.parseInt(o2.getXh());
+                }
+              } else {
+                if ("yjdz".equals(filter_match)) {
+                  return o2.getYjdz().compareTo(o1.getYjdz());
+                } else if ("hh".equals(filter_match)) {
+                  return o2.getZhbh().compareTo(o1.getZhbh());
+                } else if ("qfje".equals(filter_match)) {
+                  return Double.compare(Double.parseDouble(o2.getQfzje()), Double.parseDouble(o1.getQfzje()));
+                } else {
+                  return Integer.parseInt(o2.getXh()) - Integer.parseInt(o1.getXh());
+                }
+              }
+
+            }
+        });
+
+        return itemBeans;
+    }
+}

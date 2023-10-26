@@ -1,0 +1,97 @@
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+
+    repositories {
+        flatDir {
+            dirs '..\\libs'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/*'
+        exclude 'META-INF/rxjava.properties'
+        exclude 'META-INF/proguard/androidx-annotations.pro'
+    }
+
+    greendao {
+        schemaVersion 14
+        daoPackage 'com.sh3h.dataprovider.greendaoDao'
+        targetGenDir 'src/main/java'
+    }
+
+}
+
+dependencies {
+    api  fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    /** 依赖注入注解依赖库 **/
+    api  'javax.inject:javax.inject:1'
+    /** sqlbrite响应式数据库依赖库 **/
+    api  'com.squareup.sqlbrite:sqlbrite:0.5.0'
+    /** otto依赖库 **/
+    api  'com.squareup:otto:1.3.8'
+    /** okhttp3依赖库 **/
+    //    api  'com.squareup.okhttp3:okhttp:3.0.0-RC1'
+    //    api  'com.squareup.okhttp:logging-interceptor:2.7.2'
+//    api  'com.squareup.okhttp3:okhttp:3.4.1'
+//    api  'com.squareup.okhttp3:logging-interceptor:3.4.1'
+//    /** retrofit2依赖库 **/
+//    api  'com.squareup.retrofit2:retrofit:2.1.0'
+//    api  'com.squareup.retrofit2:converter-gson:2.1.0'
+    api  'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    /** rx依赖库 **/
+    api  'io.reactivex:rxjava:1.1.9'
+    api  'io.reactivex:rxandroid:1.2.1'
+    //api  'de.greenrobot:eventbus:3.0.0-beta1'
+    api  project(':localprovider')
+    api  project(':serverprovider')
+//    api (name: 'mobileutil', ext: 'aar')
+    api (name: 'logger', ext: 'aar')
+//    api  'com.sh3h.android:mobileutil:1.0.1@aar'
+//    api  'com.sh3h.android:logger:1.0.1@aar'
+    api  'com.zhouyou:rxeasyhttp:2.1.5'
+    api  'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.46'
+    api  'com.blankj:utilcode:1.23.7'
+
+    //PushSDK必须依赖基础组件库，所以需要加入对应依赖
+//    api  'com.umeng.umsdk:common:1.5.4'
+    compile 'com.umeng.umsdk:common:2.1.0'
+//PushSDK必须依赖utdid库，所以需要加入对应依赖
+    api  'com.umeng.umsdk:utdid:1.1.5.3'
+//PushSDK
+//    api  'com.umeng.umsdk:push:5.0.2'
+    compile 'com.umeng.umsdk:push:6.0.1'
+    api  'com.google.guava:guava:27.1-android'
+    api ('com.github.maning0303:MNProgressHUD:V1.1.5') {
+        exclude group: 'com.android.support'
+    }
+    api  'com.github.bumptech.glide:glide:3.7.0'
+    api  'top.zibin:Luban:1.1.8'
+
+    api  'com.google.dagger:dagger:2.6'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.6'
+//    compile 'com.github.markzhai:blockcanary-android:1.5.0'
+
+    api  'com.contrarywind:Android-PickerView:4.1.9'
+}

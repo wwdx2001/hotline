@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/top_navigation"
+        android:background="@color/color_gray_666E81"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/ll_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/line">
+
+        <com.sh3h.hotline.view.TabLayoutView.TabLayout
+            android:id="@+id/m_tab"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            app:bottomLineColor="@color/color_bule_1e1eb6"
+            app:bottomLineHeight="1dp"
+            app:dividerColor="@color/color_bule_1e1eb6"
+            app:dividerHeight="42dp"
+            app:dividerWidth="1dp"
+            app:tabBackground="@color/color_bule_1E90FF"
+            app:tabGravity="fill"
+            app:tabIndicatorColor="#000"
+            app:tabIndicatorHeight="1dp"
+            app:tabIndicatorWidth="0dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#fff"
+            app:tabTextColor="#fff" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tab_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/m_tab">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>

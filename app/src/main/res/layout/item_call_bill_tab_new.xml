@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_receipt"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_15"
+    android:layout_marginTop="@dimen/margin_5"
+    android:layout_marginRight="@dimen/margin_15"
+    android:layout_marginBottom="@dimen/margin_5"
+    android:hardwareAccelerated="true"
+    app:cardCornerRadius="@dimen/margin_10"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constriant_receipt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_10"
+        android:paddingRight="@dimen/margin_10">
+
+        <LinearLayout
+            android:id="@+id/ll_pch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txt_pch"
+                style="@style/font_mid_black_style"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="年：" />
+
+            <TextView
+                android:id="@+id/tv_nian"
+                style="@style/edt_mid_black_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_yhh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_pch">
+
+            <TextView
+                android:id="@+id/tv3"
+                style="@style/font_mid_black_style"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="季度：" />
+
+            <TextView
+                android:id="@+id/tv_jidu"
+                style="@style/edt_mid_black_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_xzq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_yhh">
+
+            <TextView
+                android:id="@+id/tv4"
+                style="@style/font_mid_black_style"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="超定额水量：" />
+
+            <TextView
+                android:id="@+id/tv_cdesl"
+                style="@style/edt_mid_black_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_khmc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_xzq">
+
+            <TextView
+                android:id="@+id/tv5"
+                style="@style/font_mid_black_style"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="开账金额：" />
+
+            <TextView
+                android:id="@+id/tv_kzje"
+                style="@style/edt_mid_black_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_qfje"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ll_khmc">
+
+            <TextView
+                android:id="@+id/tv7"
+                style="@style/font_mid_black_style"
+                android:paddingLeft="@dimen/margin_10"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:text="开账日期：" />
+
+            <TextView
+                android:id="@+id/tv_kzsl"
+                style="@style/edt_mid_black_style"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:paddingTop="@dimen/margin_10"
+                android:paddingRight="@dimen/margin_10"
+                android:paddingBottom="@dimen/margin_5"
+                android:textIsSelectable="true" />
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

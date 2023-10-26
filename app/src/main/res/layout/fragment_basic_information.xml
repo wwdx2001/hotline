@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/margin_20"
+        android:paddingRight="@dimen/margin_20">
+
+        <TextView
+            android:id="@+id/txt_title_acctId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_zhbh"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_acctId"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_acctId"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_cardId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_xgh"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acctId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_cardId"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_cardId"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_cardId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_perName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehumingcheng"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cardId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_perName"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_perName"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_perName"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_custClCd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehulxdm"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_perName"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_custClCd"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_custClCd"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_custClCd"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_custClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehulxmc"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_custClCd"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_custClass"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_custClass"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_custClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_creditClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehuxydj"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_custClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_creditClass"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_creditClass"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_creditClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_riskClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehufxdj"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_creditClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_riskClass"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_riskClass"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_riskClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_creditValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_kehuxyfz"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_riskClass"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_creditValue"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_creditValue"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_creditValue"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_phone25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_yzsj"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_creditValue"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_phone25"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_phone25"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_phone25"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_dz"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_phone25"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_address1"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_address1"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_address1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_lm"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address1"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_address2"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_address2"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_address2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_address3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_xq"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_address3"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_address3"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_address3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_address4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_nm"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_address4"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_address4"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_address4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_acctFlg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_yhxz"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_address4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_acctFlg"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_acctFlg"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_acctFlg"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_drkInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_drkxx"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acctFlg"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_drkInfo"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_drkInfo"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_drkInfo"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_sjfFlg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_sfddjt"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_drkInfo"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_sjfFlg"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_sjfFlg"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_sjfFlg"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_totAmt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_ndysl"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sjfFlg"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_totAmt"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_totAmt"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_totAmt"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_waterPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_sfdj"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_totAmt"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_waterPrice"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_waterPrice"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_waterPrice"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_wastePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_wsfdj"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_waterPrice"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_wastePrice"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_wastePrice"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_wastePrice"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_acctMGrpDescr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="7"
+            android:text="@string/text_zdmc"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_wastePrice"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_acctMGrpDescr"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_acctMGrpDescr"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_acctMGrpDescr"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_bankFlg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15"
+            android:ems="8"
+            android:text="@string/text_dkyhtsbz"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_acctMGrpDescr"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_bankFlg"
+            android:layout_width="0dp"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_15"
+            android:text="-"
+            android:textColor="@color/color_black_2"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_14"
+            app:layout_constraintLeft_toRightOf="@+id/txt_title_bankFlg"
+            app:layout_constraintTop_toTopOf="@+id/txt_title_bankFlg"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>

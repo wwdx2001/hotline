@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_0176da"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        tools:context="com.sh3h.hotline.ui.query.QueryOrderActivity">
+
+        <include
+            layout="@layout/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
+
+            <!--反映来源-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="@dimen/width_90"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/text_fanyinglaiyuan"
+                    android:textSize="@dimen/textsize_16" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_fanyinglaiyuan"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--反映类型-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="@dimen/width_90"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/text_fanyingleixing"
+                    android:textSize="@dimen/textsize_16" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_fanyingleixing"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--反映内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="@dimen/width_90"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/text_fanyingneirong"
+                    android:textSize="@dimen/textsize_16" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_fanyingneirong"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--反映区名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="@dimen/width_90"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="@string/text_fanyingquming"
+                    android:textSize="@dimen/textsize_16" />
+
+                <android.support.v7.widget.AppCompatSpinner
+                    android:id="@+id/sp_relect_area"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+
+            <!--受理编号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/text_task_number"
+                    android:textSize="@dimen/textsize_16" />
+
+                <EditText
+                    android:id="@+id/et_task_id"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="3"
+                    android:hint="@string/text_hint_task_number"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--地址-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/text_dizhi"
+                    android:textSize="@dimen/textsize_16" />
+
+                <EditText
+                    android:id="@+id/et_dizhi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="3"
+                    android:hint="@string/text_hint_dizhi"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--户名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/text_huming"
+                    android:textSize="@dimen/textsize_16" />
+
+                <EditText
+                    android:id="@+id/et_huming"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="3"
+                    android:hint="@string/text_hint_huming"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--联系电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:text="@string/text_lianxidianhua"
+                    android:textSize="@dimen/textsize_16" />
+
+                <EditText
+                    android:id="@+id/et_lianxidianhua"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="3"
+                    android:hint="@string/text_hint_lianxidianhua"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+
+            <!--开始日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="@string/text_start_date"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_start_date_show"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="@string/text_choose_date"
+                    android:textSize="@dimen/textsize_16" />
+
+                <ImageView
+                    android:id="@+id/iv_start_date_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_calendar_32" />
+
+            </LinearLayout>
+
+            <!--结束日期-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="@string/text_end_date"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_end_date_show"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="@string/text_choose_date"
+                    android:textSize="@dimen/textsize_16" />
+
+                <ImageView
+                    android:id="@+id/iv_end_date_calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_calendar_32" />
+            </LinearLayout>
+
+
+            <!--选择登录站点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="@string/text_login_station"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_login_station"
+                    android:layout_width="@dimen/width_150"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="@string/text_choose_login_site"
+                    android:textSize="@dimen/textsize_16" />
+
+                <ImageView
+                    android:id="@+id/iv_choose_login_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_company" />
+
+                <ImageView
+                    android:id="@+id/iv_back_login_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/ic_query_station_back" />
+
+                <ImageView
+                    android:id="@+id/iv_clear_login_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/ic_query_station_clear" />
+            </LinearLayout>
+
+            <!--选择受理站点-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:orientation="horizontal"
+                android:padding="@dimen/padding_5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:text="@string/text_admissible_site"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_accept_station"
+                    android:layout_width="@dimen/width_150"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:text="@string/text_choose_accept_site"
+                    android:textSize="@dimen/textsize_16" />
+
+                <ImageView
+                    android:id="@+id/iv_choose_accept_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_company" />
+
+                <ImageView
+                    android:id="@+id/iv_back_accept_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/ic_query_station_back" />
+
+                <ImageView
+                    android:id="@+id/iv_clear_accept_site"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_10"
+                    android:src="@mipmap/ic_query_station_clear" />
+            </LinearLayout>
+
+            <!--查询-->
+            <Button
+                android:id="@+id/btn_query"
+                android:layout_width="@dimen/width_120"
+                android:layout_height="@dimen/height_40"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/margin_20"
+                android:background="@drawable/my_border"
+                android:text="@string/text_query" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

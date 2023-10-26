@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/search_history_result_item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/radius_6">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1/123"
+            android:textColor="@color/color_gray_666E81"
+            android:textSize="@dimen/textsize_18"
+            card_view:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="5dp" />
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_1"
+            android:layout_marginTop="@dimen/padding_5"
+            android:background="@color/color_gray_d2d2d2"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_number"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_zhanghubh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_5"
+            android:ems="4"
+            android:text="@string/text_zhanghuBH"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_16"
+            card_view:layout_constraintTop_toBottomOf="@+id/view_line"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_zhanghubh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/padding_5"
+            android:text="sdfdgfyu"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_16"
+            card_view:layout_constraintLeft_toRightOf="@+id/txt_title_zhanghubh"
+            card_view:layout_constraintTop_toBottomOf="@+id/view_line"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_title_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_5"
+            android:ems="4"
+            android:text="@string/text_dizhi"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_16"
+            card_view:layout_constraintTop_toBottomOf="@+id/tv_zhanghubh"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:text="sdfdgfyu"
+            android:textColor="@color/color_gray_767676"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/textsize_16"
+            card_view:layout_constraintLeft_toRightOf="@+id/txt_title_address"
+            card_view:layout_constraintTop_toTopOf="@+id/txt_title_address"
+            tools:ignore="MissingConstraints" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>

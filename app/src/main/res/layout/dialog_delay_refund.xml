@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="35dp"
+    android:paddingRight="35dp">
+
+    <EditText
+        android:id="@+id/et_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入原因"
+        android:maxLines="3"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/et_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入备注"
+        android:maxLines="3"
+        android:textSize="@dimen/sp_14" />
+
+    <EditText
+        android:id="@+id/et_delay_day"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="延期天数"
+        android:inputType="number"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:textSize="@dimen/sp_14" />
+
+</LinearLayout>

@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_15"
+    android:layout_marginRight="@dimen/margin_15"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:hardwareAccelerated="true"
+    app:cardCornerRadius="@dimen/margin_10"
+    app:cardElevation="0dp"
+    app:cardMaxElevation="0dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/margin_10">
+
+        <CheckBox
+            android:id="@+id/cb_query"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingLeft="@dimen/margin_10"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingRight="-8dp"
+            android:paddingBottom="@dimen/margin_10"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/image_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/margin_10"
+            android:src="@drawable/ic_radio_button_unchecked" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_5"
+            android:paddingBottom="@dimen/margin_5">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="5"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:text="账户编号："
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_zhbh"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintBottom_toBottomOf="@+id/tv1"
+                app:layout_constraintLeft_toRightOf="@+id/tv1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:background="@color/color_gray_ea_divider"
+                app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+            <LinearLayout
+                android:id="@+id/linear_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line">
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:minEms="5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="册本号：" />
+
+                <TextView
+                    android:id="@+id/tv_cbh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minEms="2"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    android:id="@+id/tv3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:minEms="5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="欠费金额："
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    android:id="@+id/tv_qfje"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text=""
+                    android:textColor="@color/color_red_ff0000"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_14" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linear_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout1">
+
+                <TextView
+                    android:id="@+id/tv4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:minEms="5"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="管理所：" />
+
+                <TextView
+                    android:id="@+id/tv_gls"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_14" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="站点："
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_zd"/>
+
+            <TextView
+                android:id="@+id/tv_zd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toRightOf="@+id/tv5"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linear_layout2"/>
+
+            <TextView
+                android:id="@+id/tv6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="客户名称："
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_khmc" />
+
+            <TextView
+                android:id="@+id/tv_khmc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toRightOf="@+id/tv6"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_zd" />
+
+            <TextView
+                android:id="@+id/tv7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="用水地址："
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_ysdz" />
+
+            <TextView
+                android:id="@+id/tv_ysdz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toRightOf="@+id/tv7"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_khmc" />
+
+            <TextView
+                android:id="@+id/tv8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="5"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text="涉水代码："
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_ssdm" />
+
+            <TextView
+                android:id="@+id/tv_ssdm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_14"
+                app:layout_constraintLeft_toRightOf="@+id/tv8"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ysdz" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

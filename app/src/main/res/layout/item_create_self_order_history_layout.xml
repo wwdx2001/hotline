@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/create_self_order_history_item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginRight="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_10"
+    android:foreground="?android:attr/selectableItemBackground"
+    card_view:cardCornerRadius="@dimen/radius_6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--head部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--地址-->
+            <TextView
+                android:id="@+id/tv_dizhi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:text=""
+                android:textColor="@color/color_gray_666E81"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_18" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"></View>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fashengshijian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:gravity="center_vertical"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_666E81"
+                    android:textSize="@dimen/textsize_18" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d2d2d2"></View>
+
+        <!--body-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <!--户名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_huming"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_huming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--联系电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_lianxidianhua"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_lianxidianhua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--反映人-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_fanyingren"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_fanyingren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--反映类型-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_fanyingleixing"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_fanyingleixing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--反映内容-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_fanyingneirong"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_fanyingneirong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--处理级别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_chulijibie"
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/tv_chulijibie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text=""
+                    android:textIsSelectable="true"
+                    android:textColor="@color/color_gray_767676"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#d2d2d2"></View>
+
+        <!--bottom-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--是否上传-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_shifoushangchuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_cloud_done_grep_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_shangchuanzhuangtai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:gravity="center"
+                    android:text="已上传"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--图片上传-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_tupianshangchuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_image_24" />
+
+                <TextView
+                    android:id="@+id/tv_tupianshangchuan_shuliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:gravity="center"
+                    android:text="5"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <!--语音-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_yuyingshangchuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_music_video_gray_24dp" />
+
+                <TextView
+                    android:id="@+id/tv_yuyingshagnchuan_shuliang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_3"
+                    android:gravity="center"
+                    android:text="6"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

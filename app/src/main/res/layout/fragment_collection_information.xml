@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_15"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_15"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:hardwareAccelerated="true"
+            app:cardCornerRadius="@dimen/margin_10"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="序号：" />
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="受理时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="账户编号：" />
+
+                    <TextView
+                        android:id="@+id/tv_acountNum"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textColor="@color/color_blue_0176da"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="客户名称：" />
+
+                    <TextView
+                        android:id="@+id/tv_acountName"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="用水地址：" />
+
+                    <TextView
+                        android:id="@+id/tv_waterAdd"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="涉水代码：" />
+
+                    <TextView
+                        android:id="@+id/tv_waterCode"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="表位：" />
+
+                    <TextView
+                        android:id="@+id/tv_waterAddres"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="地点详细信息：" />
+
+                    <TextView
+                        android:id="@+id/tv_addInformation"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="铭牌编号：" />
+
+                    <TextView
+                        android:id="@+id/tv_mpbh"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="当前联系人：" />
+
+                    <TextView
+                        android:id="@+id/tv_dqlxr"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="联系电话：" />
+
+                    <TextView
+                        android:id="@+id/tv_phoneNum"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                    <ImageButton
+                        android:id="@+id/ib_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:src="@mipmap/ic_details_call" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="是否实名制：" />
+
+                    <TextView
+                        android:id="@+id/tv_sfsmz"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="上次催缴备注：" />
+
+                    <TextView
+                        android:id="@+id/tv_sccjbz"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/textsize_16" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="欠费金额：" />
+
+                    <TextView
+                        android:id="@+id/tv_qfje"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textColor="@color/color_red_ff0000"
+                        android:textIsSelectable="true"
+                        android:textSize="@dimen/textsize_16"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_update"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/button_overrate_border_blue"
+                        android:paddingStart="@dimen/margin_15"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingEnd="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="更新金额"
+                        android:visibility="gone"
+                        android:textColor="@color/color_0176da"
+                        android:textSize="@dimen/textsize_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="缴费凭证类别：" />
+
+                    <TextView
+                        android:id="@+id/tv_pztype"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="口径：" />
+
+                    <TextView
+                        android:id="@+id/tv_kj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="托收：" />
+
+                    <TextView
+                        android:id="@+id/tv_tsbj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="代扣：" />
+
+                    <TextView
+                        android:id="@+id/tv_dkbj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="账单类型：" />
+
+                    <TextView
+                        android:id="@+id/tv_zdlx"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="最后一次付费时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhycffsj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="最后一次付费金额：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhycffje"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="最后一次开账抄码：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhkzcm"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="最后一次开账水量：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhkzsl"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="最后一次开账时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhkzsj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="在装表安装时间：" />
+
+                    <TextView
+                        android:id="@+id/tv_zhychbsj"
+                        style="@style/edt_mid_black_style"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingRight="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:textIsSelectable="true" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="@dimen/height_40"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/font_mid_black_style"
+                        android:layout_width="wrap_content"
+                        android:paddingLeft="@dimen/margin_10"
+                        android:paddingTop="@dimen/margin_15"
+                        android:paddingBottom="@dimen/margin_15"
+                        android:text="账单详情：" />
+
+                    <TextView
+                        android:id="@+id/txt_inspect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginRight="@dimen/margin_10"
+                        android:background="@drawable/button_overrate_border_blue"
+                        android:paddingStart="@dimen/margin_30"
+                        android:paddingTop="@dimen/margin_5"
+                        android:paddingEnd="@dimen/margin_30"
+                        android:paddingBottom="@dimen/margin_5"
+                        android:text="查看"
+                        android:textColor="@color/color_0176da"
+                        android:textSize="@dimen/textsize_14" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </FrameLayout>
+
+</android.support.v4.widget.NestedScrollView>

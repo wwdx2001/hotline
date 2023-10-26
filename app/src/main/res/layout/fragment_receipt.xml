@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="15dp"
+        android:paddingTop="20dp"
+        android:paddingRight="15dp">
+
+        <CheckBox
+            android:id="@+id/cb_xianchangchuli"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="是否现场处理"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="20dp" />
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="服务点编号："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_xianchangchuli" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="反应类型："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv1"
+            app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="反应内容："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv2"
+            app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="处理级别："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv3"
+            app:layout_constraintTop_toBottomOf="@+id/tv3" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="新表表型："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv4"
+            app:layout_constraintTop_toBottomOf="@+id/tv4" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:minEms="6"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="发生地址："
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintLeft_toLeftOf="@+id/tv6"
+            app:layout_constraintTop_toBottomOf="@+id/tv6" />
+
+
+        <EditText
+            android:id="@+id/et_fuwudianbh"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请填写服务点编号"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv1"
+            app:layout_constraintLeft_toRightOf="@+id/tv1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+        <EditText
+            android:id="@+id/et_fanyinglx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请填写反应类型"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv2"
+            app:layout_constraintLeft_toRightOf="@+id/tv2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv2" />
+
+        <EditText
+            android:id="@+id/et_fanyingnr"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请选择反应内容"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv3"
+            app:layout_constraintLeft_toRightOf="@+id/tv3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv3" />
+
+        <EditText
+            android:id="@+id/et_chulijb"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请选择处理级别"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv4"
+            app:layout_constraintLeft_toRightOf="@+id/tv4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv4" />
+
+        <EditText
+            android:id="@+id/et_xbbx"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+            android:editable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:hint="请选择新表表型"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv6"
+            app:layout_constraintLeft_toRightOf="@+id/tv6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv6" />
+
+        <EditText
+            android:id="@+id/et_fashengdizhi"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:hint="请填写发生地址"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@+id/tv5"
+            app:layout_constraintLeft_toRightOf="@+id/tv5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv5" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

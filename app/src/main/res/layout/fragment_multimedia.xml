@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multimedia_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/multimedia_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <!--拍照-->
+            <LinearLayout
+                android:id="@+id/multimedia_take_photo_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliyun_editor_overlay_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@mipmap/ic_photo_camera_black_36dp" />
+
+                <TextView
+                    android:id="@+id/multimedia_tv_picture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/label_photo"
+                    android:textColor="@color/color_gray_666E81"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_divider" />
+
+            <GridView
+                android:id="@+id/multimedia_gv_picture"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="3dp"
+                android:numColumns="3"
+                android:paddingTop="4dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dp" />
+
+            <LinearLayout
+                android:id="@+id/multimedia_take_voice_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliyun_editor_overlay_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <com.sh3h.hotline.ui.multimedia.VoiceView
+                    android:id="@+id/multimedia_take_voice_voiceview"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:background="@mipmap/ic_mic_black_18dp"
+                    android:button="@null"
+                    android:text="@null"
+                    app:voiceMax="3" />
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@mipmap/ic_mic_black_18dp" />
+
+                <TextView
+                    android:id="@+id/multimedia_tv_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/label_voice"
+                    android:textColor="@color/color_gray_666E81"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_divider" />
+
+            <GridView
+                android:id="@+id/multimedia_lv_record"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="3dp"
+                android:numColumns="3"
+                android:paddingTop="4dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_divider" />
+
+            <!--录像-->
+            <LinearLayout
+                android:id="@+id/multimedia_take_video_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliyun_editor_overlay_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:id="@+id/multimedia_take_video_ib"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:background="@drawable/radio_button_take_video_selector" />
+
+                <TextView
+                    android:id="@+id/multimedia_tv_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_multimedia_take_video"
+                    android:textColor="@color/color_gray_666E81"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_gray_divider" />
+
+            <GridView
+                android:id="@+id/multimedia_gv_video"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:fadingEdge="none"
+                android:gravity="center"
+                android:horizontalSpacing="3dp"
+                android:numColumns="3"
+                android:paddingTop="4dp"
+                android:scrollbars="none"
+                android:stretchMode="columnWidth"
+                android:verticalSpacing="3dp" />
+
+            <!--拍照-->
+            <LinearLayout
+                android:id="@+id/multimedia_sign_up_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/aliyun_editor_overlay_line"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp">
+
+                <ImageView
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
+                    android:src="@mipmap/ic_sign_up" />
+
+                <TextView
+                    android:id="@+id/multimedia_tv_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/label_signup"
+                    android:textColor="@color/color_gray_666E81"
+                    android:textSize="@dimen/textsize_16" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/multimedia_signup_rl"
+                android:layout_width="@dimen/width_200"
+                android:layout_height="@dimen/height_200"
+                android:layout_gravity="center"
+                android:background="@color/color_gray_divider"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/multimedia_sign_up_iv"
+                    android:layout_width="@dimen/width_200"
+                    android:layout_height="@dimen/height_200"
+                    android:layout_centerInParent="true" />
+
+                <ImageView
+                    android:id="@+id/signup_uploaded_flag_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:layout_alignParentBottom="true" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

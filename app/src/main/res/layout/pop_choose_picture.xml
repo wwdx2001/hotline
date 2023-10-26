@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#56000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        android:background="@drawable/item_normal_radius"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_take_photo"
+            style="@style/txt_camera_pop_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/pop_take_photo"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_gray_d2d2d2" />
+
+        <Button
+            android:id="@+id/button_choose_photo"
+            style="@style/txt_camera_pop_menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/pop_pick_photo"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/color_gray_d2d2d2" />
+
+        <Button
+            android:id="@+id/button_choose_cancel"
+            style="@style/txt_camera_pop_menu"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@null"
+            android:text="取消"
+            android:textSize="18sp" />
+      <View
+        android:id="@+id/more_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:visibility="gone"
+        android:background="@color/color_gray_d2d2d2" />
+
+      <Button
+        android:id="@+id/button_choose_more"
+        style="@style/txt_camera_pop_menu"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+        android:background="@null"
+        android:text="取消"
+        android:textSize="18sp" />
+    </LinearLayout>
+
+</FrameLayout>

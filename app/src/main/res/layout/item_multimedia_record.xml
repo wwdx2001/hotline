@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/left_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/record_view"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/record" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_record"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="30dp"-->
+            <!--android:alpha="55" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_toRightOf="@+id/left_ll"
+        android:gravity="center_vertical"
+        android:text="10s"
+        android:textColor="@color/color_gray_666E81"
+        android:textSize="@dimen/text_size_meduim" />
+
+    <ImageView
+        android:id="@+id/item_multimedia_record_iv_upload_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_5"
+        android:layout_toRightOf="@+id/tv_time"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        android:src="@drawable/ic_cloud_upload_grey_24dp" />
+
+</LinearLayout>

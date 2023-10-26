@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/history_orders_item_cardview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/margin_10"
+    android:layout_marginTop="@dimen/margin_5"
+    android:layout_marginRight="@dimen/margin_10"
+    android:layout_marginBottom="@dimen/margin_5"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="@dimen/margin_10"
+    app:ignore="NamespaceTypo"
+    card_view:cardCornerRadius="@dimen/radius_6">
+
+    <LinearLayout
+        android:id="@+id/item_collection_task"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_5">
+
+        <!--head部分-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_5"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!--册本号-->
+            <TextView
+                android:id="@+id/history_orders_item_tv_order_number"
+                style="@style/font_mid_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_15"
+                android:text="@string/collection_cbh"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:id="@+id/colection_task_item_tv_book_number"
+                style="@style/font_mid_black_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_weight="1"
+                android:textIsSelectable="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_10"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/history_orders_item_tv_order_date"
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/collection_gdzs"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/colection_task_item_tv_order_sum"
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:textIsSelectable="true" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_10"
+            android:background="#d2d2d2"></View>
+
+        <!--body-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/margin_5"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_15">
+
+            <!--账号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:text="@string/text_huming"
+                    android:textColor="@color/color_gray_767676"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_16" />
+
+                <TextView
+                    android:id="@+id/history_orders_item_tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_5"
+                    android:textColor="@color/color_gray_767676"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_16" />
+
+            </LinearLayout>
+
+            <!--联系电话-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/collection_ywcs"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/colection_task_item_tv_completed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_black_2"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_14" />
+
+                <TextView
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/collection_wwcs"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/collection_task_item_tv_not_completed"
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    style="@style/font_mid_black_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/collection_lqsl"
+                    android:textIsSelectable="true" />
+
+                <TextView
+                    android:id="@+id/colection_task_item_tv_dying_period"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/color_red_ff0000"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/textsize_14" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

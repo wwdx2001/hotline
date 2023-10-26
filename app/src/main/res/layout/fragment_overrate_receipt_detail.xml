@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="序号："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_xuhao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="受理时间："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_shoulisj"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="派单类型："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_paidanlx"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="行政区："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_xingzhengq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="用户号："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_yonghum"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="客户名称："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_kehumc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="邮寄地址："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_youjidz"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="联系人："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_lianxir"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="联系方式："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_lianxifs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:minHeight="@dimen/height_40">
+
+            <TextView
+                android:id="@+id/txt_qfje"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:minEms="6"
+                android:text="欠费金额："
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+            <TextView
+                android:id="@+id/tv_qianfeije"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_20"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:text=""
+                android:textColor="@color/color_red_ff0000"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/textsize_16" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

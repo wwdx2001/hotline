@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--    <item android:bottom="25dp">-->
+    <item>
+        <shape android:shape="rectangle">
+            <!--设置渐变色-->
+            <gradient
+                android:angle="360"
+                android:endColor="#0686f3"
+                android:startColor="#2e8fec" />
+
+            <!--设置上面两个角的弧度-->
+            <!--            <corners-->
+            <!--                android:topLeftRadius="10dp"-->
+            <!--                android:topRightRadius="10dp" />-->
+
+            <corners android:radius="@dimen/margin_10" />
+
+            <padding
+                android:bottom="@dimen/margin_15"
+                android:left="@dimen/margin_15"
+                android:right="@dimen/margin_15"
+                android:top="@dimen/margin_15" />
+        </shape>
+    </item>
+
+    <!--    <item android:top="50dp">-->
+    <!--        <shape android:shape="rectangle">-->
+    <!--            <gradient-->
+    <!--                android:angle="360"-->
+    <!--                android:startColor="#43b1f8"-->
+    <!--                android:endColor="#0686f3"/>-->
+    <!--            &lt;!&ndash;设置下面两个角的弧度&ndash;&gt;-->
+    <!--            <corners-->
+    <!--                android:bottomLeftRadius="10dp"-->
+    <!--                android:bottomRightRadius="10dp" />-->
+    <!--        </shape>-->
+    <!--    </item>-->
+</layer-list>

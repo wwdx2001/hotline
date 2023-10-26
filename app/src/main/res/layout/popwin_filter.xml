@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/btn_overrate_border"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_10">
+
+        <RadioButton
+            android:id="@+id/radio_filter_asc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="升序" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="降序" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/radiogroup"
+        android:layout_marginTop="@dimen/margin_5"
+        android:layout_marginBottom="@dimen/margin_5"
+        android:background="#8a8a8a" />
+
+    <RadioGroup
+        android:id="@+id/radiogroup2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/margin_10"
+        android:paddingEnd="@dimen/margin_10"
+        android:paddingBottom="@dimen/margin_10">
+
+        <RadioButton
+            android:id="@+id/radio_filter_yjdz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="按邮寄地址" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_hh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按户号" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_xh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="按序号" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_qfje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按欠费金额"
+
+            />
+
+        <RadioButton
+            android:id="@+id/radio_filter_ysdz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按用水地址"
+            android:visibility="gone" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_je"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按金额"
+            android:visibility="gone" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/radiogroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view_line"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_10"
+        android:visibility="gone">
+
+        <RadioButton
+            android:id="@+id/radio_filter_qb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="全部" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_cbycj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抄表员催缴" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_cisfqcj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_10"
+            android:paddingBottom="@dimen/margin_10"
+            android:text="CIS选择性催缴" />
+
+        <RadioButton
+            android:id="@+id/radio_filter_cbjzkd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="抄表员自开单" />
+
+    </RadioGroup>
+
+</RelativeLayout>

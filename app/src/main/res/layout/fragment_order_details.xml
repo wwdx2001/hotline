@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv1"
+            style="@style/style_text_left"
+            android:text="账户编号："
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_acctId"
+            style="@style/style_text_right"
+            android:autoLink="all"
+            android:enabled="false"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv1"
+            tools:ignore="MissingConstraints" />
+
+        <View
+            android:id="@+id/view_navigation"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_acctId"
+            app:layout_constraintLeft_toLeftOf="@+id/tv_acctId"
+            app:layout_constraintRight_toRightOf="@+id/tv_acctId"
+            app:layout_constraintTop_toTopOf="@+id/tv_acctId" />
+
+        <TextView
+            android:id="@+id/tv2"
+            style="@style/style_text_left"
+            android:text="现场活动编号："
+            app:layout_constraintLeft_toLeftOf="@+id/tv1"
+            app:layout_constraintTop_toBottomOf="@+id/view_navigation"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_faId"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv2"
+            app:layout_constraintLeft_toRightOf="@+id/tv2"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv2"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv3"
+            style="@style/style_text_left"
+            android:text="案例编号："
+            app:layout_constraintLeft_toLeftOf="@+id/tv2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_faId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_caseId"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv3"
+            app:layout_constraintLeft_toRightOf="@+id/tv3"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv3"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv4"
+            style="@style/style_text_left"
+            android:text="原案例编号："
+            app:layout_constraintLeft_toLeftOf="@+id/tv3"
+            app:layout_constraintTop_toBottomOf="@+id/tv_caseId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_oldCaseId"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv4"
+            app:layout_constraintLeft_toRightOf="@+id/tv4"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv4"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv5"
+            style="@style/style_text_left"
+            android:text="反映人："
+            app:layout_constraintLeft_toLeftOf="@+id/tv4"
+            app:layout_constraintTop_toBottomOf="@+id/tv_oldCaseId"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_entityName"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv5"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv6"
+            style="@style/style_text_left"
+            android:text="受理站点："
+            app:layout_constraintLeft_toLeftOf="@+id/tv5"
+            app:layout_constraintTop_toBottomOf="@+id/tv_entityName"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_disPatGrp"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv6"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv6"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv7"
+            style="@style/style_text_left"
+            android:text="发生时间："
+            app:layout_constraintLeft_toLeftOf="@+id/tv6"
+            app:layout_constraintTop_toBottomOf="@+id/tv_disPatGrp"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_ldsj"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv7"
+            app:layout_constraintLeft_toRightOf="@+id/tv7"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv7"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv8"
+            style="@style/style_text_left"
+            android:text="发生地址："
+            app:layout_constraintLeft_toLeftOf="@+id/tv7"
+            app:layout_constraintTop_toBottomOf="@+id/tv_ldsj"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_fsdz"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv8"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv8"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv9"
+            style="@style/style_text_left"
+            android:text="联系电话："
+            app:layout_constraintLeft_toLeftOf="@+id/tv8"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fsdz"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_contactValue"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv9"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv9"
+            tools:ignore="MissingConstraints" />
+
+        <ImageButton
+            android:id="@+id/ib_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/ic_details_call"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_contactValue"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_contactValue" />
+
+        <TextView
+            android:id="@+id/tv10"
+            style="@style/style_text_left"
+            android:text="手机："
+            app:layout_constraintLeft_toLeftOf="@+id/tv9"
+            app:layout_constraintTop_toBottomOf="@+id/tv_contactValue"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_mobile"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv10"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv10"
+            tools:ignore="MissingConstraints" />
+
+
+        <ImageButton
+            android:id="@+id/ib_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:src="@mipmap/ic_details_phone"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_mobile"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_mobile" />
+
+        <TextView
+            android:id="@+id/tv11"
+            style="@style/style_text_left"
+            android:text="反映来源："
+            app:layout_constraintLeft_toLeftOf="@+id/tv10"
+            app:layout_constraintTop_toBottomOf="@+id/tv_mobile"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_fyly"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv11"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv11"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv12"
+            style="@style/style_text_left"
+            android:text="反映类型："
+            app:layout_constraintLeft_toLeftOf="@+id/tv11"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fyly"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_faTypeCd"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv12"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv12"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv13"
+            style="@style/style_text_left"
+            android:text="反映内容："
+            app:layout_constraintLeft_toLeftOf="@+id/tv12"
+            app:layout_constraintTop_toBottomOf="@+id/tv_faTypeCd"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_fynr"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv13"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv13"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv14"
+            style="@style/style_text_left"
+            android:text="处理级别："
+            app:layout_constraintLeft_toLeftOf="@+id/tv13"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fynr"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_cljb"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv14"
+            app:layout_constraintLeft_toRightOf="@+id/tv14"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv14"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv15"
+            style="@style/style_text_left"
+            android:text="处理时限："
+            app:layout_constraintLeft_toLeftOf="@+id/tv14"
+            app:layout_constraintTop_toBottomOf="@+id/tv_cljb"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_clsx"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tv15"
+            app:layout_constraintLeft_toRightOf="@+id/tv15"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv15"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv16"
+            style="@style/style_text_left"
+            android:text="处理人："
+            app:layout_constraintLeft_toLeftOf="@+id/tv15"
+            app:layout_constraintTop_toBottomOf="@+id/tv_clsx"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_repCd"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv16"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv16"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv17"
+            style="@style/style_text_left"
+            android:text="受理备注："
+            app:layout_constraintLeft_toLeftOf="@+id/tv16"
+            app:layout_constraintTop_toBottomOf="@+id/tv_repCd"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_comment"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv17"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv17"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv18"
+            style="@style/style_text_left"
+            android:text="派单时间："
+            app:layout_constraintLeft_toLeftOf="@+id/tv17"
+            app:layout_constraintTop_toBottomOf="@+id/tv_comment"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_creDttm"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv18"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv18"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tv19"
+            style="@style/style_text_left"
+            android:text="预约时间："
+            app:layout_constraintLeft_toLeftOf="@+id/tv18"
+            app:layout_constraintTop_toBottomOf="@+id/tv_creDttm"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_yysj"
+            style="@style/style_text_right"
+            android:text="-"
+            app:layout_constraintLeft_toRightOf="@+id/tv19"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv19"
+            tools:ignore="MissingConstraints" />
+    </android.support.constraint.ConstraintLayout>
+</android.support.v4.widget.NestedScrollView>

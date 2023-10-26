@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@mipmap/ic_menu_search"
+        android:title="@string/menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/action_all_tasks"
+        android:orderInCategory="200"
+        android:title="@string/menu_all_tasks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_deadline_tasks"
+        android:orderInCategory="201"
+        android:title="@string/menu_deadline_tasks"
+        app:showAsAction="never"></item>
+
+    <item
+        android:id="@+id/action_expired_task"
+        android:orderInCategory="202"
+        android:title="@string/menu_expired_tasks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_noexpired_task"
+        android:orderInCategory="203"
+        android:title="@string/menu_noexpired_tasks"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_upload_tasks"
+        android:orderInCategory="204"
+        android:title="@string/menu_upload_tasks"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_fylx_tasks"
+        android:orderInCategory="205"
+        android:title="@string/menu_fylx_tasks"
+        app:showAsAction="never"></item>
+
+</menu>

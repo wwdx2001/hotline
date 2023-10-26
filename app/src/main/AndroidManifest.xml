@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.sh3h.hotline">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.flash" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="androd.permission.INSTALL_PCAKAGES" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+
+    <application
+        android:name=".MainApplication"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.main.LoginActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.order.myorder.picture.PictureFileActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_handle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.call.CallBillDetailNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_call_bill_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.order.myorder.questionwater.QuestionWaterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_handle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.order.myorder.remotewater.RemoteWaterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_handle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.order.myorder.illegalwater.IllegalWaterActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_handle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.order.self.create.receipt.ReceiptCallQueryResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_call_selfbilling"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuStyle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.order.self.create.CreateSelfOrderNewActivity"
+            android:label="@string/activity_createselforder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.nonresident.receipt.OverrateReceiptNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_receipt"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuStyle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.call.OverrateCallNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_call"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.sign.SignatureNameNewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_signup_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.selfbilling.OverrateSelfInvoicingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_selfbilling"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.selfbilling.EditSubmitActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_selfbilling_editsubmit"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.selfbilling.QuerySelectResultActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_selfbilling_queryselect"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.ScanBarCodeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.sign.SignatureNameActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_signup_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.call.CallBillDetailActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_call_bill_detail"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.call.OverrateCallHandleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_call"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.receipt.OverrateReceiptHandleActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_receipt"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.call.OverrateCallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_call"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.receipt.OverrateReceiptActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_receipt"
+            android:screenOrientation="portrait"
+            android:theme="@style/PopupMenuStyle"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.selfbilling.OverrateSelfBillingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_overrate_selfbilling"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.nonresident.NonResidentOverrateActivity"
+            android:label="@string/label_nonresident_overrate"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".ui.bill.detail.servicepoint.details.JinQiCMActivity"
+            android:label="@string/title_activity_jin_qi_cm"
+            android:theme="@style/AppTheme.NoActionBar" /> <!-- 7.0适配临时文件申请 -->
+        <activity android:name=".ui.order.self.detail.ZikaidanJLDetail" />
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait">
+            <!--            <intent-filter>-->
+            <!--                <action android:name="android.intent.action.MAIN" />-->
+
+            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
+            <!--            </intent-filter>-->
+        </activity>
+        <activity
+            android:name=".ui.order.myorder.list.MyOrderListActivity"
+            android:label="@string/label_my_order"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- umeng keys -->
+        <activity
+            android:name=".ui.bill.QueryBillActivity"
+            android:label="@string/activity_query_bill"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.bill.result.QueryBillResultActivity"
+            android:label="@string/activity_query_bill_result"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.knowledge.KnowledgeBaseActivity"
+            android:label="@string/activity_knowledgebase"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 我的工单 -->
+        <activity
+            android:name=".ui.order.self.create.CreateSelfOrderActivity"
+            android:label="@string/activity_createselforder"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 账务查询 -->
+        <activity
+            android:name=".ui.order.self.history.CreateSelfOrderHistoryActivity"
+            android:label="@string/activity_createselforderhistory"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 账务查询结果 -->
+        <activity
+            android:name=".ui.order.myorder.delayorback.DelayOrBackOrderActivity"
+            android:label="@string/label_delay"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden" /> <!-- 服务指南 -->
+        <activity
+            android:name=".ui.order.myorder.handle.HandleOrderActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/label_handle"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" /> <!-- 自开单 -->
+        <activity
+            android:name=".ui.order.myorder.history.HistoryOrdersActivity"
+            android:label="@string/label_history_orders"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 自开单记录 -->
+        <activity
+            android:name=".ui.notice.NoWaterSupplyNoticeActivity"
+            android:label="@string/label_no_water_supply"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 工单延期/退单 -->
+        <activity
+            android:name=".ui.notice.WaterNoticeDetailsActivity"
+            android:label="@string/label_notice_details"
+            android:screenOrientation="portrait" /> <!-- 工单处理 -->
+        <activity
+            android:name=".ui.query.QueryOrderActivity"
+            android:label="@string/label_query_orders"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 历史工单 -->
+        <activity
+            android:name=".ui.query.QueryOrderResultActivity"
+            android:label="@string/label_query_orders"
+            android:screenOrientation="portrait" /> <!-- 停水公告 -->
+        <activity
+            android:name=".ui.order.self.detail.CreateSelfOrderDetailActivity"
+            android:label="@string/activity_createselforderdetail"
+            android:screenOrientation="portrait" /> <!-- 公告详情 -->
+        <activity
+            android:name=".ui.bill.detail.UserDetailInformationActivity"
+            android:label="@string/activity_user_detail_information"
+            android:screenOrientation="portrait" /> <!-- 工单查询 -->
+        <activity
+            android:name=".ui.bill.detail.recentbill.detail.RecentBillInformationDetailActivity"
+            android:label="@string/activity_recent_bill_information_detail"
+            android:screenOrientation="portrait" /> <!-- 工单查询结果列表 -->
+        <activity
+            android:name=".ui.bill.detail.arrears.detail.ArrearsInformationDetailActivity"
+            android:label="@string/activity_arrears_information_detail"
+            android:screenOrientation="portrait" /> <!-- 工单查询结果详情 -->
+        <!-- 自开单详情 -->
+        <activity
+            android:name=".ui.multimedia.PictureDetailsActivity"
+            android:label="@string/activity_picture_details"
+            android:screenOrientation="portrait" /> <!-- 用户详细信息 -->
+        <!-- 自开单详情 -->
+        <activity
+            android:name=".ui.setting.SettingActivity"
+            android:label="@string/label_setting"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 催缴任务 -->
+        <activity
+            android:name=".ui.collection.CollectionTaskActivity"
+            android:label="@string/label_collection_task"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 催缴任务工单列表 -->
+        <activity
+            android:name=".ui.collection.CollectionTaskListActivity"
+            android:label="@string/label_collection_task_list"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 催缴任务回填页面 -->
+        <activity
+            android:name=".ui.collection.CollectionTaskOrderBackfillingActivity"
+            android:label="@string/label_collection_task_list"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 近期开账详情 -->
+        <activity
+            android:name=".ui.web.WebActivity"
+            android:label="@string/text_web_activity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 欠费信息详情 -->
+        <activity
+            android:name=".ui.query.ChooseSiteActivity"
+            android:label="@string/label_choose_site"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity> <!-- 幻灯片 -->
+        <activity
+            android:name=".ui.multimedia.PlayVideoActivity"
+            android:label="@string/label_play_video"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8exaMjEnjWtbRWjdqD9KQyNhzvg6X6QU"></meta-data>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5ca1d2c93fc195a1a60007e8" /> <!-- 网页 -->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Channel ID" /> <!-- 选择站点 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider> <!-- 播放视频 -->
+        <provider
+            android:name=".util.AppFileProvider"
+            android:authorities="com.sh3h.hotline.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <service android:name=".service.SyncService" />
+        <service android:name=".service.UploadDataService" />
+        <service android:name=".service.AlertTasksService" />
+    </application>
+
+</manifest>
