@@ -130,7 +130,7 @@ public class LoginActivity extends ParentActivity implements View.OnClickListene
                             if (loginStatusEntity.getData() != null) {
                                 ToastUtils.showShort(loginStatusEntity.getMsg());
                                 // 保存信息到登录历史表
-                                LoginActivity.this.savePassword(Integer.parseInt(loginStatusEntity.getData().getUserId()), loginStatusEntity.getData().getAccount(),
+                                LoginActivity.this.savePassword(loginStatusEntity.getData().getUserId().hashCode(), loginStatusEntity.getData().getAccount(),
                                         mEtPwd.getText().toString().trim(),
                                         "F6D62986-915F-4DD8-963A-B0632F-149E18");
 

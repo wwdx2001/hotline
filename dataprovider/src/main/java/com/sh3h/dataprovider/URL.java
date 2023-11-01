@@ -17,11 +17,14 @@ public class URL {
 //    public static final String BASE_URL = "http://128.1.3.40:8080/CustomerService/";
 //    public static final String BASE_URL = "http://180.167.190.84:8080/CustomerService/";
 
-    public static final String BASE_IN_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_IN_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL_CB = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+
+    //市北宝山
+    public static final String BASE_IN_URL = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
     public static final String BASE_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
-    public static final String BASE_URL_CB = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
-    //市北宝山登录
-    private static final String BASE_URL_CB_BS = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService";
+    public static final String BASE_URL_CB = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
 //    public static final String BASE_IN_URL = "https://cbt.shanghaiwater.com:7901/CustomerService/";
 //    public static final String BASE_URL = "https://cbt.shanghaiwater.com:7901/CustomerService/";
 //    public static final String BASE_URL_CB = "https://cb.shanghaiwater.com:7900/ChaoBiao/";
@@ -35,7 +38,7 @@ public class URL {
      * 登录
      * http://180.167.6.229:14000/dingeAPPAPI/CustomerService/login
      */
-    public static final String Login = BASE_URL_CB_BS + "login";
+    public static final String Login = "login";
 
     /**
      * 客户欠费查询
