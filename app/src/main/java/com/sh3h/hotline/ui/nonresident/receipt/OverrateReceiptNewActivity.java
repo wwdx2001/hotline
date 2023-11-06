@@ -89,6 +89,7 @@ import com.sh3h.hotline.ui.nonresident.chart.CallXYMarkerView;
 import com.sh3h.hotline.ui.nonresident.chart.ReceiptXYMarkerView;
 import com.sh3h.hotline.util.CollectionUtils;
 import com.sh3h.hotline.util.DisplayUtils;
+import com.sh3h.hotline.util.StringCheckUtils;
 import com.sh3h.hotline.view.CustomGoodsCounterView;
 import com.sh3h.hotline.view.PopupWindowFilter;
 import com.squareup.otto.Bus;
@@ -190,38 +191,48 @@ public class OverrateReceiptNewActivity extends ParentActivity implements View.O
       @Override
       public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         if (actionId == EditorInfo.IME_ACTION_SEARCH) {
-          String searchText = mEtSearch.getText().toString().trim();
-          if (itemBeans != null) {
-            if (!"".equals(searchText)) {
-              if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                List<ReceiptListEntity> collect = itemBeans.stream()
-                  .filter(receiptListEntity -> receiptListEntity.getYhh().contains(searchText))
-                  .collect(Collectors.toList());
-                mAdapter.setNewData(collect);
-                tvWwcgds.setText(String.valueOf(collect.size()));
-              } else {
-                List<ReceiptListEntity> datas = new ArrayList<>();
-                for (ReceiptListEntity data: itemBeans) {
-                  if (data.getYhh().contains(searchText)) {
-                    datas.add(data);
-                  }
-                }
-                mAdapter.setNewData(datas);
-                tvWwcgds.setText(String.valueOf(datas.size()));
-              }
-            } else {
-              mAdapter.setNewData(itemBeans);
-              tvWwcgds.setText(String.valueOf(itemBeans.size()));
-
-            }
-          }
-
+          searchData();
         }
         return false;
       }
     };
 
-    @Override
+  private void searchData() {
+    String searchText = mEtSearch.getText().toString().trim();
+    if (itemBeans != null) {
+      if (!"".equals(searchText)) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+          List<ReceiptListEntity> collect;
+          if (StringCheckUtils.isInt(searchText)) {
+            collect = itemBeans.stream()
+              .filter(receiptListEntity -> receiptListEntity.getYhh().contains(searchText))
+              .collect(Collectors.toList());
+          } else {
+            collect = itemBeans.stream()
+              .filter(receiptListEntity -> receiptListEntity.getKhmc().contains(searchText))
+              .collect(Collectors.toList());
+          }
+          mAdapter.setNewData(collect);
+          tvWwcgds.setText(String.valueOf(collect.size()));
+        } else {
+          List<ReceiptListEntity> datas = new ArrayList<>();
+          for (ReceiptListEntity data: itemBeans) {
+            if (data.getYhh().contains(searchText) || data.getKhmc().contains(searchText)) {
+              datas.add(data);
+            }
+          }
+          mAdapter.setNewData(datas);
+          tvWwcgds.setText(String.valueOf(datas.size()));
+        }
+      } else {
+        mAdapter.setNewData(itemBeans);
+        tvWwcgds.setText(String.valueOf(itemBeans.size()));
+
+      }
+    }
+  }
+
+  @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_overrate_receipt_new);
@@ -867,6 +878,7 @@ public class OverrateReceiptNewActivity extends ParentActivity implements View.O
                             Toaster.show(params);
                         }
                         mEtSearch.setText("");
+                        searchData();
                     }
 
                     @Override

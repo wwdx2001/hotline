@@ -33,6 +33,7 @@ public class ReceiptListEntity implements Serializable {
     private String cqsx;
     private String yhh;
     private String youbian;
+    private String qrlianxidh;
 
     public String getYhh() {
         return yhh;
@@ -272,5 +273,13 @@ public class ReceiptListEntity implements Serializable {
 
     public String getYoubian() {
       return youbian;
+    }
+
+    public void setQsrTel(String qsrTel) {
+      this.qrlianxidh = qsrTel;
+    }
+
+    public String getQsrTel() {
+      return qrlianxidh;
     }
 }

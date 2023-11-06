@@ -175,6 +175,9 @@ public class CallHandleFragment extends ParentFragment implements View.OnClickLi
     @BindView(R.id.et_zip_code)
     EditText mZipCodeEt;
 
+    @BindView(R.id.et_cuijiaoqr_tel)
+    EditText mCuiJiaoRTel;
+
     private CallListEntity mParam1;
 
     private String mParam2;
@@ -540,6 +543,7 @@ public class CallHandleFragment extends ParentFragment implements View.OnClickLi
             mYouJiDZ.setText(callHandleEntity.getYjdz());
             mBeiZhu.setText(callHandleEntity.getBz());
             mZipCodeEt.setText(callHandleEntity.getYoubian());
+            mCuiJiaoRTel.setText(callHandleEntity.getCjqrTel());
         } else {
             mZhangHuBH.setText(mParam1.getYhh() + "/" + mParam1.getZhbh());
             mXingZhengQ.setText(mParam1.getXzq());
@@ -551,6 +555,7 @@ public class CallHandleFragment extends ParentFragment implements View.OnClickLi
             mYouJiDZ.setText(mParam1.getYjdz());
             mBeiZhu.setText(mParam1.getBz());
             mZipCodeEt.setText(mParam1.getYoubian());
+            mCuiJiaoRTel.setText(mParam1.getCjqrTel());
         }
     }
 

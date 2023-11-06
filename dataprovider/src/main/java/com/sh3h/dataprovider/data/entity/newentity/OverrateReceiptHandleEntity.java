@@ -36,13 +36,15 @@ public class OverrateReceiptHandleEntity {
     private String yjdz;
     private String bz;
     private String youbian;
+    private String qsrTel;
 
-    @Generated(hash = 2124063736)
+    @Generated(hash = 230186332)
     public OverrateReceiptHandleEntity(Long ID, String albh, String pch, String xh,
             String yhh, String psfs, String ghxdh, String sfsd, String wqsyy,
             String qsr, String sjrsf, String fdqkbz, String xxbg, String zhbh,
             String xzq, String ssdm, String khlx, String tyshxydm, String khmc,
-            String lxr, String lxfs, String yjdz, String bz, String youbian) {
+            String lxr, String lxfs, String yjdz, String bz, String youbian,
+            String qsrTel) {
         this.ID = ID;
         this.albh = albh;
         this.pch = pch;
@@ -67,6 +69,7 @@ public class OverrateReceiptHandleEntity {
         this.yjdz = yjdz;
         this.bz = bz;
         this.youbian = youbian;
+        this.qsrTel = qsrTel;
     }
     @Generated(hash = 1265210146)
     public OverrateReceiptHandleEntity() {
@@ -214,5 +217,11 @@ public class OverrateReceiptHandleEntity {
     }
     public void setYoubian(String youbian) {
         this.youbian = youbian;
+    }
+    public String getQsrTel() {
+        return this.qsrTel;
+    }
+    public void setQsrTel(String qsrTel) {
+        this.qsrTel = qsrTel;
     }
 }

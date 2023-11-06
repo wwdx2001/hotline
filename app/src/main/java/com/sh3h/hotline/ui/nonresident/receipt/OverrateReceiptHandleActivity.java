@@ -140,6 +140,7 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
     private String yjdz;
     private String bz;
     private String zipCode;
+    private String qsrTel;
 
     protected CompositeSubscription mSubscription;
 
@@ -250,6 +251,7 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
         yjdz = mHandleOrderFragment.mYouJiDZ.getText().toString().trim();
         bz = mHandleOrderFragment.mBeiZhu.getText().toString().trim();
         zipCode = mHandleOrderFragment.mZipCodeEt.getText().toString().trim();
+        qsrTel = mHandleOrderFragment.mQianShouRTelEt.getText().toString().trim();
 
         if ("上门派送".equals(psfs) && "送达".equals(sfsd) && "".equals(qsr)
                 && "".equals(fdqkbz) && "否".equals(xxbg)) {
@@ -290,6 +292,7 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
         handleEntity.setYjdz(yjdz);
         handleEntity.setBz(bz);
         handleEntity.setYoubian(zipCode);
+        handleEntity.setQsrTel(qsrTel);
 
         GreenDaoUtils.getDaoSession(this).getOverrateReceiptHandleEntityDao().insertOrReplace(handleEntity);
         mEventPosterHelper.postEventSafely(new NotifRefrashDataEvent(true));
@@ -327,6 +330,7 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
         yjdz = mHandleOrderFragment.mYouJiDZ.getText().toString().trim();
         bz = mHandleOrderFragment.mBeiZhu.getText().toString().trim();
         zipCode = mHandleOrderFragment.mZipCodeEt.getText().toString().trim();
+        qsrTel = mHandleOrderFragment.mQianShouRTelEt.getText().toString().trim();
 
         if (TextUtils.isEmpty(psfs)) {
 //            ToastUtils.showShort("派送方式不能为空！");
@@ -480,13 +484,22 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
                 return;
             }
 
-//           if (!TextUtils.isEmpty(zipCode)) {
-//              ToastParams params = new ToastParams();
-//              params.text = "请添加邮政编码！";
-//              params.style = new CustomToastStyle(R.layout.toast_error);
-//              Toaster.show(params);
-//              return;
-//          }
+           if (TextUtils.isEmpty(qsrTel)) {
+              ToastParams params = new ToastParams();
+              params.text = "请填写签收人联系方式！";
+              params.style = new CustomToastStyle(R.layout.toast_error);
+              Toaster.show(params);
+              return;
+          } else {
+             if (qsrTel.length() < 11) {
+               ToastParams params = new ToastParams();
+               params.text = "请填写正确的签收人联系方式！";
+               params.style = new CustomToastStyle(R.layout.toast_error);
+               Toaster.show(params);
+               return;
+             }
+           }
+
         }
 
         if (mMultimediaFragment instanceof MultimediaFileFragment) {
@@ -1022,7 +1035,8 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
                 .params("bgbz", bz)
                 .params("gdzt", "完成")
                 .params("gdztyy", "")
-                .params("youbian", zipCode);
+                .params("youbian", zipCode)
+                .params("qrlianxidh", qsrTel);
 
         if (!"寄挂号信".equals(psfs) && mHandleOrderFragment.getHandleEntity() != null) {
             String dzqm1 = "";

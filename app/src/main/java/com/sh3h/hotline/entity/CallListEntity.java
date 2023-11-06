@@ -43,6 +43,7 @@ public class CallListEntity implements Serializable {
     private String cjqx;
     private String yhh;
     private String youbian;
+    private String qrlianxidh;
 
     public String getPch() {
         return pch;
@@ -354,5 +355,13 @@ public class CallListEntity implements Serializable {
 
     public String getYoubian() {
       return youbian;
+    }
+
+    public void setCjqrTel(String cjqrTel) {
+      this.qrlianxidh = cjqrTel;
+    }
+
+    public String getCjqrTel() {
+      return qrlianxidh;
     }
 }

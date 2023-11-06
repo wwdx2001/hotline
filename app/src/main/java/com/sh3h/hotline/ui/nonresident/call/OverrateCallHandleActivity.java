@@ -143,6 +143,7 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
     private String yjdz;
     private String bz;
     private String zipCode;
+    private String cjqrTel;
 
     protected CompositeSubscription mSubscription;
 
@@ -278,6 +279,7 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
         yjdz = mHandleOrderFragment.mYouJiDZ.getText().toString().trim();
         bz = mHandleOrderFragment.mBeiZhu.getText().toString().trim();
         zipCode = mHandleOrderFragment.mZipCodeEt.getText().toString().trim();
+        cjqrTel = mHandleOrderFragment.mCuiJiaoRTel.getText().toString().trim();
 
         if ("支付问题".equals(cjdl) && "客户申请付款流程中".equals(cjxl) && "".equals(ncqcjcs)
                 && "".equals(cjbz) && "否".equals(cjqr) && "否".equals(xxbg)) {
@@ -322,6 +324,7 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
         handleEntity.setYjdz(yjdz);
         handleEntity.setBz(bz);
         handleEntity.setYoubian(zipCode);
+        handleEntity.setCjqrTel(cjqrTel);
 
         GreenDaoUtils.getDaoSession(this).getOverrateCallHandleEntityDao().insertOrReplace(handleEntity);
 
@@ -359,6 +362,7 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
         yjdz = mHandleOrderFragment.mYouJiDZ.getText().toString().trim();
         bz = mHandleOrderFragment.mBeiZhu.getText().toString().trim();
         zipCode = mHandleOrderFragment.mZipCodeEt.getText().toString().trim();
+        cjqrTel = mHandleOrderFragment.mCuiJiaoRTel.getText().toString().trim();
 
         if (TextUtils.isEmpty(cjdl)) {
 //            ToastUtils.showShort("催缴大类不能为空！");
@@ -574,6 +578,22 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
                     Toaster.show(params);
                     return false;
                 }
+            }
+
+            if (TextUtils.isEmpty(cjqrTel)) {
+              ToastParams params = new ToastParams();
+              params.text = "请填写签收人联系方式！";
+              params.style = new CustomToastStyle(R.layout.toast_error);
+              Toaster.show(params);
+              return false;
+            } else {
+              if (cjqrTel.length() < 11) {
+                ToastParams params = new ToastParams();
+                params.text = "请填写正确的签收人联系方式！";
+                params.style = new CustomToastStyle(R.layout.toast_error);
+                Toaster.show(params);
+                return false;
+              }
             }
 
             if (mMultimediaFragment instanceof MultimediaFileFragment) {
@@ -1081,6 +1101,7 @@ public class OverrateCallHandleActivity extends ParentActivity implements RadioG
                 .params("gdzt", "完成")
                 .params("gdztyy", "")
                 .params("youbian", zipCode)
+                .params("qrlianxidh", cjqrTel)
                 .execute(new SimpleCallBack<String>() {
                     @Override
                     public void onStart() {

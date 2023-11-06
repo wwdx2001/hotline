@@ -35,7 +35,7 @@ android {
     }
 
     greendao {
-        schemaVersion 14
+        schemaVersion 16
         daoPackage 'com.sh3h.dataprovider.greendaoDao'
         targetGenDir 'src/main/java'
     }

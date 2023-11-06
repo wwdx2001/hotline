@@ -40,14 +40,15 @@ public class OverrateCallHandleEntity {
     private String bz;
     private String isCuiJiao;
     private String youbian;
+    private String cjqrTel;
 
-    @Generated(hash = 1489722661)
-    public OverrateCallHandleEntity(Long ID, String albh, String pch, String xh,
-            String yhh, String cjdl, String cjxl, String zqzddz, String zqhm,
-            String xhm, String jfly, String qkms, String ncqcjcs, String cjqr,
-            String cjbz, String xxbg, String zhbh, String xzq, String ssdm,
-            String khlx, String tyshxydm, String khmc, String lxr, String lxfs,
-            String yjdz, String bz, String isCuiJiao, String youbian) {
+    @Generated(hash = 1091550999)
+    public OverrateCallHandleEntity(Long ID, String albh, String pch, String xh, String yhh,
+            String cjdl, String cjxl, String zqzddz, String zqhm, String xhm, String jfly,
+            String qkms, String ncqcjcs, String cjqr, String cjbz, String xxbg, String zhbh,
+            String xzq, String ssdm, String khlx, String tyshxydm, String khmc, String lxr,
+            String lxfs, String yjdz, String bz, String isCuiJiao, String youbian,
+            String cjqrTel) {
         this.ID = ID;
         this.albh = albh;
         this.pch = pch;
@@ -76,6 +77,7 @@ public class OverrateCallHandleEntity {
         this.bz = bz;
         this.isCuiJiao = isCuiJiao;
         this.youbian = youbian;
+        this.cjqrTel = cjqrTel;
     }
     @Generated(hash = 1632295611)
     public OverrateCallHandleEntity() {
@@ -247,5 +249,11 @@ public class OverrateCallHandleEntity {
     }
     public void setYoubian(String youbian) {
         this.youbian = youbian;
+    }
+    public String getCjqrTel() {
+        return this.cjqrTel;
+    }
+    public void setCjqrTel(String cjqrTel) {
+        this.cjqrTel = cjqrTel;
     }
 }

@@ -52,6 +52,7 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
         public final static Property Bz = new Property(25, String.class, "bz", false, "BZ");
         public final static Property IsCuiJiao = new Property(26, String.class, "isCuiJiao", false, "IS_CUI_JIAO");
         public final static Property Youbian = new Property(27, String.class, "youbian", false, "YOUBIAN");
+        public final static Property CjqrTel = new Property(28, String.class, "cjqrTel", false, "CJQR_TEL");
     }
 
 
@@ -94,7 +95,8 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
                 "\"YJDZ\" TEXT," + // 24: yjdz
                 "\"BZ\" TEXT," + // 25: bz
                 "\"IS_CUI_JIAO\" TEXT," + // 26: isCuiJiao
-                "\"YOUBIAN\" TEXT);"); // 27: youbian
+                "\"YOUBIAN\" TEXT," + // 27: youbian
+                "\"CJQR_TEL\" TEXT);"); // 28: cjqrTel
     }
 
     /** Drops the underlying database table. */
@@ -246,6 +248,11 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
         if (youbian != null) {
             stmt.bindString(28, youbian);
         }
+ 
+        String cjqrTel = entity.getCjqrTel();
+        if (cjqrTel != null) {
+            stmt.bindString(29, cjqrTel);
+        }
     }
 
     @Override
@@ -391,6 +398,11 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
         if (youbian != null) {
             stmt.bindString(28, youbian);
         }
+ 
+        String cjqrTel = entity.getCjqrTel();
+        if (cjqrTel != null) {
+            stmt.bindString(29, cjqrTel);
+        }
     }
 
     @Override
@@ -428,7 +440,8 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
             cursor.isNull(offset + 24) ? null : cursor.getString(offset + 24), // yjdz
             cursor.isNull(offset + 25) ? null : cursor.getString(offset + 25), // bz
             cursor.isNull(offset + 26) ? null : cursor.getString(offset + 26), // isCuiJiao
-            cursor.isNull(offset + 27) ? null : cursor.getString(offset + 27) // youbian
+            cursor.isNull(offset + 27) ? null : cursor.getString(offset + 27), // youbian
+            cursor.isNull(offset + 28) ? null : cursor.getString(offset + 28) // cjqrTel
         );
         return entity;
     }
@@ -463,6 +476,7 @@ public class OverrateCallHandleEntityDao extends AbstractDao<OverrateCallHandleE
         entity.setBz(cursor.isNull(offset + 25) ? null : cursor.getString(offset + 25));
         entity.setIsCuiJiao(cursor.isNull(offset + 26) ? null : cursor.getString(offset + 26));
         entity.setYoubian(cursor.isNull(offset + 27) ? null : cursor.getString(offset + 27));
+        entity.setCjqrTel(cursor.isNull(offset + 28) ? null : cursor.getString(offset + 28));
      }
     
     @Override

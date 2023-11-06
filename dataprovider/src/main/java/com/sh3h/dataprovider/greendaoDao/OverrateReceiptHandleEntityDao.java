@@ -48,6 +48,7 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
         public final static Property Yjdz = new Property(21, String.class, "yjdz", false, "YJDZ");
         public final static Property Bz = new Property(22, String.class, "bz", false, "BZ");
         public final static Property Youbian = new Property(23, String.class, "youbian", false, "YOUBIAN");
+        public final static Property QsrTel = new Property(24, String.class, "qsrTel", false, "QSR_TEL");
     }
 
 
@@ -86,7 +87,8 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
                 "\"LXFS\" TEXT," + // 20: lxfs
                 "\"YJDZ\" TEXT," + // 21: yjdz
                 "\"BZ\" TEXT," + // 22: bz
-                "\"YOUBIAN\" TEXT);"); // 23: youbian
+                "\"YOUBIAN\" TEXT," + // 23: youbian
+                "\"QSR_TEL\" TEXT);"); // 24: qsrTel
     }
 
     /** Drops the underlying database table. */
@@ -218,6 +220,11 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
         if (youbian != null) {
             stmt.bindString(24, youbian);
         }
+ 
+        String qsrTel = entity.getQsrTel();
+        if (qsrTel != null) {
+            stmt.bindString(25, qsrTel);
+        }
     }
 
     @Override
@@ -343,6 +350,11 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
         if (youbian != null) {
             stmt.bindString(24, youbian);
         }
+ 
+        String qsrTel = entity.getQsrTel();
+        if (qsrTel != null) {
+            stmt.bindString(25, qsrTel);
+        }
     }
 
     @Override
@@ -376,7 +388,8 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
             cursor.isNull(offset + 20) ? null : cursor.getString(offset + 20), // lxfs
             cursor.isNull(offset + 21) ? null : cursor.getString(offset + 21), // yjdz
             cursor.isNull(offset + 22) ? null : cursor.getString(offset + 22), // bz
-            cursor.isNull(offset + 23) ? null : cursor.getString(offset + 23) // youbian
+            cursor.isNull(offset + 23) ? null : cursor.getString(offset + 23), // youbian
+            cursor.isNull(offset + 24) ? null : cursor.getString(offset + 24) // qsrTel
         );
         return entity;
     }
@@ -407,6 +420,7 @@ public class OverrateReceiptHandleEntityDao extends AbstractDao<OverrateReceiptH
         entity.setYjdz(cursor.isNull(offset + 21) ? null : cursor.getString(offset + 21));
         entity.setBz(cursor.isNull(offset + 22) ? null : cursor.getString(offset + 22));
         entity.setYoubian(cursor.isNull(offset + 23) ? null : cursor.getString(offset + 23));
+        entity.setQsrTel(cursor.isNull(offset + 24) ? null : cursor.getString(offset + 24));
      }
     
     @Override

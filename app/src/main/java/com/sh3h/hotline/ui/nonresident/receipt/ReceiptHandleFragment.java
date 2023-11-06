@@ -140,6 +140,9 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
   @BindView(R.id.et_zip_code)
   EditText mZipCodeEt;
 
+  @BindView(R.id.et_qianshour_tel)
+  EditText mQianShouRTelEt;
+
   @BindView(R.id.spinner_xxbg)
   public Spinner spinnerXxbg;
 
@@ -157,6 +160,9 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
 
   @BindView(R.id.ll_qsr)
   LinearLayout llQsr;
+
+  @BindView(R.id.ll_qsr_tel)
+  LinearLayout llQsrTel;
 
   @BindView(R.id.ll_sjrsf)
   LinearLayout llSjrsf;
@@ -484,6 +490,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
       mShouJianRSF.setText(receiptHandleEntity.getSjrsf());
       mFaDanQKBZ.setText(receiptHandleEntity.getFdqkbz());
       mZipCodeEt.setText(receiptHandleEntity.getYoubian());
+      mQianShouRTelEt.setText(receiptHandleEntity.getQsrTel());
       LogUtils.e(receiptHandleEntity.getWqsyy());
 
       List<OverrateCallHandleEntity> callEntityList = GreenDaoUtils.getDaoSession(MainApplication.getInstance()).getOverrateCallHandleEntityDao()
@@ -526,6 +533,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
       mYouJiDZ.setText(mParam1.getYjdz());
       mBeiZhu.setText(mParam1.getBz());
       mZipCodeEt.setText(mParam1.getYoubian());
+      mQianShouRTelEt.setText(mParam1.getQsrTel());
     }
 
   }
@@ -603,6 +611,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
             }
           }
           mZipCodeEt.setText(mParam1.getYoubian());
+          mQianShouRTelEt.setText(mParam1.getQsrTel());
 
         } else {
           spinnerXxbg.setEnabled(true);
@@ -964,6 +973,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
       case "送达":
         llWqsyy.setVisibility(View.GONE);
         llQsr.setVisibility(View.VISIBLE);
+        llQsrTel.setVisibility(View.VISIBLE);
         llSjrsf.setVisibility(View.VISIBLE);
         if ("其他".equals(spinnerQsr.getSelectedItem().toString())) {
           llSjrsf.setVisibility(View.VISIBLE);
@@ -982,6 +992,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
       case "未送达":
         llWqsyy.setVisibility(View.VISIBLE);
         llQsr.setVisibility(View.GONE);
+        llQsrTel.setVisibility(View.GONE);
         llSjrsf.setVisibility(View.GONE);
         mShouJianRSF.setText("");
         if (isFirstSfsd) {
@@ -1231,6 +1242,7 @@ public class ReceiptHandleFragment extends ParentFragment implements View.OnClic
         }
 
         mZipCodeEt.setText(mParam1.getYoubian());
+        mQianShouRTelEt.setText(mParam1.getQsrTel());
 
 //                if (!StringUtils.isEmpty(handleEntity.getZqhm())) {
 //                    mKeHuMC.setText(handleEntity.getZqhm());
