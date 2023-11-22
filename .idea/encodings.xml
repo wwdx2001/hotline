@@ -5,5 +5,9 @@
     <file url="file://$PROJECT_DIR$/../TestDemo/local.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../TextDemo/gradle.properties" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../TextDemo/local.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../app_updater_demo/gradle.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../app_updater_demo/gradle/wrapper/gradle-wrapper.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../app_updater_demo/local.properties" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../shibei/MeterReading/meterreading/app/src/main/assets/config/system.properties" charset="UTF-8" />
   </component>
 </project>

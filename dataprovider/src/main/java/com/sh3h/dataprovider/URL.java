@@ -22,9 +22,14 @@ public class URL {
 //    public static final String BASE_URL_CB = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
 
     //市北宝山
-    public static final String BASE_IN_URL = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
-    public static final String BASE_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
-    public static final String BASE_URL_CB = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_IN_URL = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL_CB = "http://222.69.159.99:7676/dingeAPPAPI/CustomerService/";
+    //宝山内网
+//    public static final String BASE_IN_URL = "http://10.122.8.37:7676/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL = "http://180.167.6.229:14000/dingeAPPAPI/CustomerService/";
+//    public static final String BASE_URL_CB = "http://10.122.8.37:7676/dingeAPPAPI/CustomerService/";
+
 //    public static final String BASE_IN_URL = "https://cbt.shanghaiwater.com:7901/CustomerService/";
 //    public static final String BASE_URL = "https://cbt.shanghaiwater.com:7901/CustomerService/";
 //    public static final String BASE_URL_CB = "https://cb.shanghaiwater.com:7900/ChaoBiao/";

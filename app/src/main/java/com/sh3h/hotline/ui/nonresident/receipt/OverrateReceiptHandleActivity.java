@@ -484,23 +484,23 @@ public class OverrateReceiptHandleActivity extends ParentActivity implements Rad
                 return;
             }
 
-           if (TextUtils.isEmpty(qsrTel)) {
-              ToastParams params = new ToastParams();
-              params.text = "请填写签收人联系方式！";
-              params.style = new CustomToastStyle(R.layout.toast_error);
-              Toaster.show(params);
-              return;
-          } else {
-             if (qsrTel.length() < 11) {
-               ToastParams params = new ToastParams();
-               params.text = "请填写正确的签收人联系方式！";
-               params.style = new CustomToastStyle(R.layout.toast_error);
-               Toaster.show(params);
-               return;
-             }
-           }
-
         }
+
+      if (TextUtils.isEmpty(qsrTel)) {
+        ToastParams params = new ToastParams();
+        params.text = "请填写签收人联系方式！";
+        params.style = new CustomToastStyle(R.layout.toast_error);
+        Toaster.show(params);
+        return;
+      } else {
+        if (qsrTel.length() < 11) {
+          ToastParams params = new ToastParams();
+          params.text = "请填写正确的签收人联系方式！";
+          params.style = new CustomToastStyle(R.layout.toast_error);
+          Toaster.show(params);
+          return;
+        }
+      }
 
         if (mMultimediaFragment instanceof MultimediaFileFragment) {
             int fileSize = mMultimediaFragment.getFileSize();
