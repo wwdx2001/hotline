@@ -1,6 +1,7 @@
 package com.sh3h.hotline.ui.setting;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
@@ -11,22 +12,17 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.blankj.utilcode.util.SPUtils;
-import com.blankj.utilcode.util.TimeUtils;
-import com.blankj.utilcode.util.ToastUtils;
 import com.sh3h.dataprovider.data.local.config.ConfigHelper;
+import com.sh3h.hotline.util.ActivityManagerHelper;
 import com.sh3h.dataprovider.util.Constant;
 import com.sh3h.dataprovider.util.NetworkUtil;
 import com.sh3h.dataprovider.util.PackageUtil;
 import com.sh3h.hotline.R;
 import com.sh3h.hotline.ui.base.ParentActivity;
-import com.sh3h.hotline.util.CommonUtils;
+import com.sh3h.hotline.ui.main.LoginActivity;
 import com.sh3h.mobileutil.util.ApplicationsUtil;
-
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
 import javax.inject.Inject;
 
@@ -55,6 +51,9 @@ public class SettingActivity extends ParentActivity implements SettingMvpView, R
 
     @BindView(R.id.radiogroup_tips)
     RadioGroup mRadioGroupTips;
+
+    @BindView(R.id.cv_log_out)
+    CardView mCvLogOut;
 
     @Inject
     ConfigHelper mConfigHelper;
@@ -95,6 +94,38 @@ public class SettingActivity extends ParentActivity implements SettingMvpView, R
             mRadioGroupTips.check(R.id.radio_tips_no);
         }
         mRadioGroupTips.setOnCheckedChangeListener(this);
+    }
+
+    /**
+      * 提示是否退出登录
+      * 如果退登情况sp，清空activity栈，跳转到登陆界面
+      * @param view
+      */
+    @OnClick(R.id.cv_log_out)
+    public void promptLogOut(View view) {
+      AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+
+      dialog.setTitle("是否要退出登录");
+      dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+          dialog.dismiss();
+        }
+      });
+
+      dialog.setNeutralButton("确定", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+          SPUtils.getInstance("user").clear();
+
+          ActivityManagerHelper.getInstance().popParentElesActivites();
+
+          Intent intent = new Intent(SettingActivity.this, LoginActivity.class);
+          startActivity(intent);
+        }
+      });
+
+      dialog.show();
     }
 
     @OnClick(R.id.cv_network)

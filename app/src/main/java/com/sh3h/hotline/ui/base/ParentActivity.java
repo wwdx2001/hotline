@@ -20,6 +20,7 @@ import android.view.View;
 import com.sh3h.dataprovider.data.entity.DUHistoryTask;
 import com.sh3h.dataprovider.data.entity.request.DUReply;
 import com.sh3h.dataprovider.data.local.preference.PreferencesHelper;
+import com.sh3h.hotline.util.ActivityManagerHelper;
 import com.sh3h.hotline.MainApplication;
 import com.sh3h.hotline.R;
 import com.sh3h.hotline.service.SyncConst;
@@ -66,6 +67,8 @@ public class ParentActivity extends BaseActivity implements SwipeBackActivityBas
     public ParentActivity() {
         super();
         //isConfigInitSuccess = true;
+      //将前台的activity添加到栈内
+      ActivityManagerHelper.getInstance().pushActivity(this);
     }
 
     @Override

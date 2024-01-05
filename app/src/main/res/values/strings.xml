@@ -361,6 +361,7 @@
     <string name="text_network_setting">网络设置</string>
     <string name="dialog_content_network_setting">数据访问地址</string>
     <string name="text_version_info">版本信息</string>
+    <string name="text_log_out">退出登录</string>
     <string name="label_setting">设置</string>
     <string name="label_record">录音</string>
     <string name="label_record_end">结束</string>
