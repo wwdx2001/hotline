@@ -13,6 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.RequiresApi;
 
 import com.blankj.utilcode.util.LogUtils;
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.StringUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.google.gson.Gson;
@@ -102,6 +103,8 @@ public class LoginActivity extends ParentActivity implements View.OnClickListene
     }
 
     private void startCSLogin() {
+        String account = mEtAccount.getText().toString().trim();
+        String passWord = mEtPwd.getText().toString().trim();
         IProgressDialog iProgressDialog = new IProgressDialog() {
             @Override
             public Dialog getDialog() {
@@ -111,8 +114,8 @@ public class LoginActivity extends ParentActivity implements View.OnClickListene
             }
         };
         EasyHttp.post(URL.Login)
-                .params("account", mEtAccount.getText().toString().trim())
-                .params("passWord", mEtPwd.getText().toString().trim())
+                .params("account", account)
+                .params("passWord", passWord)
                 .execute(new ProgressDialogCallBack<String>(iProgressDialog, true, false) {
                     @Override
                     public void onError(ApiException e) {
@@ -133,6 +136,10 @@ public class LoginActivity extends ParentActivity implements View.OnClickListene
                                 LoginActivity.this.savePassword(loginStatusEntity.getData().getUserId().hashCode(), loginStatusEntity.getData().getAccount(),
                                         mEtPwd.getText().toString().trim(),
                                         "F6D62986-915F-4DD8-963A-B0632F-149E18");
+
+                                //记录用户账号密码
+                                SPUtils.getInstance("user").put("account", account);
+                                SPUtils.getInstance("user").put("passWord", passWord);
 
                                 startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                 finish();

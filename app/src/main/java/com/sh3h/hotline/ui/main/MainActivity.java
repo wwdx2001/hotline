@@ -6,11 +6,15 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
+import com.blankj.utilcode.util.SPUtils;
 import com.blankj.utilcode.util.ToastUtils;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.sh3h.hotline.R;
@@ -62,6 +66,16 @@ public class MainActivity extends ParentActivity implements MainMvpView, BaseQui
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+      //进入首页时先判断用户是否登陆过，没有登陆就跳到登陆页面
+      String account = SPUtils.getInstance("user").getString("account", "");
+      String passWord = SPUtils.getInstance("user").getString("passWord", "");
+      if (TextUtils.isEmpty(account) || TextUtils.isEmpty(passWord)) {
+        Toast.makeText(this, "账号密码验证不完整，需重新登陆", Toast.LENGTH_SHORT);
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+      }
+
         setContentView(R.layout.activity_main);
         getActivityComponent().inject(this);
         mPresenter.attachView(this);
@@ -86,14 +100,6 @@ public class MainActivity extends ParentActivity implements MainMvpView, BaseQui
 
         //startMqttService();
         url2Path("http://128.1.3.40:8085/api/update/app/meterreading/MeterreadingManager_Apk_V48.zip");
-
-        char[] chars = "远传表巡检（3）-秦忠明".toCharArray();
-      int i = "远传表巡检（3）-秦忠明".hashCode();
-      Log.i("xnhh", "onCreate: " + "远传表巡检（3）-秦忠明".equals("远传表巡检（3）-秦忠明"));
-      if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-        Log.i("xnhh", "onCreate: " + Integer.hashCode(i));
-      }
-//      Log.i("xnhh", "onCreate: " + Arrays.hashCode(chars));
     }
 
 
@@ -145,27 +151,29 @@ public class MainActivity extends ParentActivity implements MainMvpView, BaseQui
         return false;
     }
 
-    //    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.toolbar_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_search:
+//            case R.id.action_search:
                 //Toast.makeText(MainActivity.this, R.string.menu_search, Toast.LENGTH_SHORT).show();
 //                Snackbar.make(mShackContainer, R.string.menu_search, Snackbar.LENGTH_SHORT).show();
-                break;
-            case R.id.action_notification:
+//                break;
+//            case R.id.action_notification:
                 //Toast.makeText(MainActivity.this, R.string.menu_notifications, Toast.LENGTH_SHORT).show();
-                break;
+//                break;
             case R.id.action_settings:
                 //Toast.makeText(MainActivity.this, R.string.menu_settings, Toast.LENGTH_SHORT).show();
 //                Snackbar.make(mShackContainer, R.string.menu_settings, Snackbar.LENGTH_SHORT).show();
-                break;
-            case R.id.action_about:
+              Intent intent = new Intent(this, SettingActivity.class);
+              startActivity(intent);
+              break;
+//            case R.id.action_about:
                 //Toast.makeText(MainActivity.this, R.string.menu_about_us, Toast.LENGTH_SHORT).show();
 //                Snackbar.make(mShackContainer, R.string.menu_about_us, Snackbar.LENGTH_SHORT).show();
         }

@@ -25,6 +25,7 @@ import com.sh3h.hotline.R;
 import com.sh3h.hotline.service.SyncConst;
 import com.sh3h.hotline.service.SyncService;
 import com.sh3h.hotline.service.SyncType;
+import com.sh3h.hotline.util.ActivityManagerHelper;
 
 import javax.inject.Inject;
 
@@ -66,6 +67,8 @@ public class ParentActivity extends BaseActivity implements SwipeBackActivityBas
     public ParentActivity() {
         super();
         //isConfigInitSuccess = true;
+      //将前台的activity添加到栈内
+      ActivityManagerHelper.getInstance().pushActivity(this);
     }
 
     @Override
