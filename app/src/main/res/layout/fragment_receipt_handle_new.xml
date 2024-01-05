@@ -564,8 +564,7 @@
                                 android:paddingTop="@dimen/margin_15"
                                 android:paddingEnd="@dimen/margin_10"
                                 android:paddingRight="@dimen/margin_10"
-                                android:paddingBottom="@dimen/margin_15"
-                                android:textIsSelectable="true" />
+                                android:paddingBottom="@dimen/margin_15"/>
 
                         </LinearLayout>
 
