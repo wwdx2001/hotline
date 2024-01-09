@@ -119,6 +119,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * 超定额发单
+ */
 public class OverrateReceiptNewActivity extends ParentActivity implements View.OnClickListener,
         BaseQuickAdapter.OnItemClickListener, BaseQuickAdapter.OnItemChildClickListener {
 
@@ -649,7 +652,7 @@ public class OverrateReceiptNewActivity extends ParentActivity implements View.O
                 break;
             case R.id.txt_operate:
                 Intent intent = new Intent(OverrateReceiptNewActivity.this, OverrateReceiptHandleActivity.class);
-                intent.putExtra("receipt", itemBeans.get(position));
+                intent.putExtra("receipt", mAdapter.getData().get(position));
                 startActivity(intent);
                 break;
             default:
@@ -867,7 +870,7 @@ public class OverrateReceiptNewActivity extends ParentActivity implements View.O
                         LogUtils.e(mNetWorkDatas.toString());
                         if (mNetWorkDatas != null && mNetWorkDatas.size() > 0) {
                             llTab.setVisibility(View.VISIBLE);
-                            tvWwcgds.setText(mNetWorkDatas.size() + "");
+                            tvWwcgds.setText(String.valueOf(mAdapter.getData().size()));
                             riceAdventList(mNetWorkDatas);
                         } else {
                             llTab.setVisibility(View.GONE);

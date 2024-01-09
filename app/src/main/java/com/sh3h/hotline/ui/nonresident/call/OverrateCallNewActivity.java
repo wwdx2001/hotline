@@ -113,6 +113,9 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 import io.reactivex.disposables.Disposable;
 
+/**
+ * 超定额催缴
+ */
 public class OverrateCallNewActivity extends ParentActivity implements View.OnClickListener,
         BaseQuickAdapter.OnItemClickListener, BaseQuickAdapter.OnItemChildClickListener {
 
@@ -597,7 +600,7 @@ public class OverrateCallNewActivity extends ParentActivity implements View.OnCl
 //                    return;
 //                }
                 Intent intent = new Intent(OverrateCallNewActivity.this, OverrateCallHandleActivity.class);
-                intent.putExtra("call", itemBeans.get(position));
+                intent.putExtra("call", mAdapter.getData().get(position));
                 startActivity(intent);
                 break;
             default:
@@ -766,7 +769,7 @@ public class OverrateCallNewActivity extends ParentActivity implements View.OnCl
                         LogUtils.e(mNetWorkDatas.toString());
                         if (mNetWorkDatas != null && mNetWorkDatas.size() > 0) {
                             llTab.setVisibility(View.VISIBLE);
-                            tvWwcgds.setText(mNetWorkDatas.size() + "");
+                            tvWwcgds.setText(String.valueOf(mAdapter.getData().size()));
                             riceAdventList(mNetWorkDatas);
                         } else {
                             llTab.setVisibility(View.GONE);
