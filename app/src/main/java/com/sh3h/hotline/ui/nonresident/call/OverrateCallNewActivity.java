@@ -769,8 +769,8 @@ public class OverrateCallNewActivity extends ParentActivity implements View.OnCl
                         LogUtils.e(mNetWorkDatas.toString());
                         if (mNetWorkDatas != null && mNetWorkDatas.size() > 0) {
                             llTab.setVisibility(View.VISIBLE);
-                            tvWwcgds.setText(String.valueOf(mAdapter.getData().size()));
                             riceAdventList(mNetWorkDatas);
+                            tvWwcgds.setText(String.valueOf(mAdapter.getData().size()));
                         } else {
                             llTab.setVisibility(View.GONE);
 //                            ToastUtils.showShort("没有数据");
