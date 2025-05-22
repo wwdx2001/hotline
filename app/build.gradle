@@ -17,8 +17,8 @@ android {
         applicationId "com.sh3h.hotline"
         minSdkVersion 19
         targetSdkVersion 25
-        versionCode 67
-        versionName '1.6.7'
+        versionCode 68
+        versionName '1.6.8'
         multiDexEnabled = true
 //        ndk {
 //            // 设置支持的SO库架构（开发者可以根据需要，选择一个或多个平台的so）

@@ -5,7 +5,6 @@ import android.content.Context;
 import android.os.Build;
 import android.widget.TextView;
 
-import androidx.annotation.RequiresApi;
 
 import com.github.mikephil.charting.components.MarkerView;
 import com.github.mikephil.charting.data.Entry;

@@ -431,6 +431,7 @@
                             android:layout_marginLeft="@dimen/margin_5"
                             android:paddingLeft="@dimen/margin_10"
                             android:text="*"
+                            android:visibility="invisible"
                             android:textColor="@color/color_red_ff0000"
                             android:textSize="@dimen/text_size_xxxlarge" />
 
